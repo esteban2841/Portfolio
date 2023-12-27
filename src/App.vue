@@ -1,37 +1,21 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import type NavItem from './components/NavItem.vue';
 </script>
 
 <template>
   <header>
-
-    <div class="wrapper">
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+    <NavItem/>
   </header>
-
-  <RouterView />
 </template>
 
 <style scoped>
 header {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
-
-  .wrapper {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
 }
 </style>

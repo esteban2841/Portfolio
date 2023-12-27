@@ -1,15 +1,25 @@
-<template lang="ts">
-    <div class="nav-links-container">
-        <h3>
-            <slot name="Link"></slot>
-        </h3>
-    </div>
+<template>
+    <nav class="navBar">
+        <PhotoSection/>
+        <SocialNetworks/>
+    </nav>
 </template>
-<script>
+<script setup lang="ts">
+    import { RouterLink } from 'vue-router'
+    import ConsoleIcon from './icons/ConsoleIcon.vue'
+    import SocialNetworks from './SocialNetworks.vue';
+    import PhotoSection from './PhotoSection.vue';
 </script>
-<style lang="">
-    .nav-links-container{
-        display:flex;
-        background-color:blue;
-    }
+<style scoped>
+.navBar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 260px;
+    background-color: #212121;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+
 </style>

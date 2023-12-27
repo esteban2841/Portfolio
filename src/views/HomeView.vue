@@ -1,9 +1,16 @@
 <script setup lang="ts">
-  import NavItem from './../components/NavItem.vue'
 </script>
 
 <template>
-  <main>
-    <NavItem/>
-  </main>
+  <section class="home-section">
+    
+  </section>
 </template>
+<style>
+  .home-section{
+    height: 100vh;
+    width: 100vw;
+    background-color: #291711;
+  }
+
+</style>
