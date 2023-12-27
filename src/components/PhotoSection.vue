@@ -7,16 +7,22 @@
     <div class="photo-section">
         <div class="photo-mask">
             <div class="photo-container">
-                <img src='require("../assets/foto-mask-left.png")'/>
+                <img :src="photo" alt="photo"/>
             </div>
-            <div></div>
+            <div class="change-settings-container">
+                <div class="theme-settings-container">
+                    <SunIcon/>
+                </div>
+                <div class="locale-settings-container"></div>
+            </div>
         </div>
     </div>
 
 </template>
 <script setup lang="ts">
     import {XIcon} from 'heroicons-vue3/solid'
-    import photo from '../assets/foto-mask-left'
+    import {SunIcon} from 'heroicons-vue3/solid'
+    import photo from '../assets/foto-mask-left.png'
 </script>
 <style scoped>
     .close-container{
@@ -45,6 +51,9 @@
         padding: 10px;
     }
     .photo-mask{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         background-color: aliceblue;
         margin-top: 50px;
     }
@@ -52,5 +61,11 @@
         width: 90px;
         height: 90px;
         background-color: aliceblue;
+        img{
+            height: 92px;
+        }
+    }
+    .change-settings-container{
+        background-color: antiquewhite;
     }
 </style>
