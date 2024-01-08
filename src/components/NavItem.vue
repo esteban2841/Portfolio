@@ -2,6 +2,7 @@
     <nav class="navBar">
         <PhotoSection/>
         <SocialNetworks/>
+        <BorderBook/>
     </nav>
 </template>
 <script setup lang="ts">
@@ -9,6 +10,7 @@
     import ConsoleIcon from './icons/ConsoleIcon.vue'
     import SocialNetworks from './SocialNetworks.vue';
     import PhotoSection from './PhotoSection.vue';
+    import BorderBook from "./"
 </script>
 <style scoped>
 .navBar {

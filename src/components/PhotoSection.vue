@@ -11,18 +11,58 @@
             </div>
             <div class="change-settings-container">
                 <div class="theme-settings-container">
-                    <SunIcon/>
+                    <SunIcon class="sun-icon"/>
                 </div>
-                <div class="locale-settings-container"></div>
+                <div class="locale-settings-container">
+                    <span class="translate-icon">
+                        <TranslateIcon class="translate"/>
+                    </span>
+                    <span class="lang">
+                        <div @click="getLocale">
+                        </div>
+                        <ul class="lang-list" >
+                            <li v-for="(localeName, index) in locale" :key="index">{{ localeName }}</li>
+                        </ul>
+                    </span>
+                    <span class="down-arrow-container">
+                        
+                    </span>
+                </div>
             </div>
         </div>
     </div>
 
 </template>
-<script setup lang="ts">
+<script lang="ts">
+    import photo from '../assets/foto-mask-left.png'
     import {XIcon} from 'heroicons-vue3/solid'
     import {SunIcon} from 'heroicons-vue3/solid'
-    import photo from '../assets/foto-mask-left.png'
+    import { TranslateIcon } from "heroicons-vue3/solid"
+    import { mapState, mapActions, mapGetters } from 'vuex';
+    export default {
+        data (){
+            return {
+                photo,
+                locale: this.locale
+            }
+        },
+        computed:{
+            ...mapState(['locale']),
+            ...mapGetters(['getLocale'])
+        },
+        methods:{
+            ...mapActions(['setLocale'])
+        },
+        components: {
+            XIcon,
+            SunIcon,
+            TranslateIcon
+        },
+        mounted () {
+            const log = this.getLocale
+            console.log("🚀 ~ file: PhotoSection.vue:64 ~ mounted ~ log:", log)
+        }
+    }
 </script>
 <style scoped>
     .close-container{
@@ -54,18 +94,59 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: aliceblue;
         margin-top: 50px;
+        width: 100%;
     }
     .photo-container{
         width: 90px;
         height: 90px;
-        background-color: aliceblue;
         img{
             height: 92px;
         }
     }
     .change-settings-container{
-        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+    }
+    .sun-icon{
+        fill: yellow;
+        width: 40px;
+        height: 40px;
+    }
+    .theme-settings-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .theme-settings-container:hover{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3C4043;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .translate{
+        fill: white;
+        width: 30px;
+        height: 30px;
+    }
+    .locale-settings-container{
+        width: 86px;
+        height: 42px;
+        background-color: #363636;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lang-list{
+        list-style-type: none;
+        padding: 0px;
     }
 </style>
