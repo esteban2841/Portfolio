@@ -34,12 +34,16 @@
 
 <style scoped>
     .social-networks-container{
-        position: absolute;
-        bottom: 2px;
+        bottom: 0px;
         width: 258px;
         height: 92px;
         background-color: #3C4043;
         box-sizing: border-box;
+        position:absolute;
+        @media (max-width: 750px){
+            width:100%;
+            justify-self: flex-end;
+        }
     }
     .icon-buttons-container{
         display: flex;

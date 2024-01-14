@@ -1,7 +1,7 @@
 <template>
     <div class="close-container">
-        <span class="close-icon-container">
-            <XIcon class="close-icon"/>
+        <span class="close-icon-container" v-show="mobile" @click="toggleNavBar">
+            <XIcon class="close-icon" />
         </span>
     </div>
     <div class="photo-section">
@@ -47,11 +47,11 @@
             }
         },
         computed:{
-            ...mapState(['locale']),
+            ...mapState(['locale', 'mobile', 'isNavOpen']),
             ...mapGetters(['getLocale'])
         },
         methods:{
-            ...mapActions(['setLocale'])
+            ...mapActions(['setLocale', 'toggleNavBar'])
         },
         components: {
             XIcon,
@@ -70,25 +70,30 @@
         background-color: #212121;
         padding: 10px;
         width: 100%;
-        height: 60px;
-        box-sizing: border-box;
+        height: 70px;
         justify-content: flex-end;
-        .close-icon-container{
-            width: 40px;
-            height: 40px;
-            border: solid 1px white;
-        }
-        .close-icon{
-            fill: white;
-            width: 40px;
-            height: 40px;
-        }
+        box-sizing: border-box;
     }
-
+    .close-icon-container{
+        width: 40px;
+        height: 40px;
+        border: solid 1px white;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+    .close-icon{
+        fill: white;
+        width: 35px;
+        height: 35px;
+    }
+    
     .photo-section{
         display: flex;
-        height: 142px;
+        width: 100%;
+        height: 170px;
         padding: 10px;
+        box-sizing: border-box;
     }
     .photo-mask{
         display: flex;

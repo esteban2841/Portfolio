@@ -1,21 +1,44 @@
-<script setup lang="ts">
-import { RouterView } from 'vue-router'
-import type NavItem from './components/NavItem.vue';
+<script lang="ts">
+  import { RouterView } from 'vue-router'
+  import NavItem from './components/NavItem.vue';
+  import { mapState } from "vuex";
+
+  export default {
+    data() {
+        return {
+            
+        }
+    },
+    components:{
+      NavItem,
+      RouterView
+    },
+    computed:{
+      ...mapState(['isNavOpen'])
+    }
+  }
 </script>
 
 <template>
-  <header>
+  <header v-show="isNavOpen">
     <NavItem/>
   </header>
+  <RouterView />
 </template>
 
 <style scoped>
 header {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  width: 260px;
+  height: 100%;
 }
+
+@media (max-width: 750px){
+  header{
+    width: 100%;
+  }
+}
+
+
 </style>

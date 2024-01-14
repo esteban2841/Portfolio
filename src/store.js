@@ -1,13 +1,15 @@
 import { createStore } from 'vuex'
 import esDict from './common/i18n/es.json'
-console.log("🚀 ~ file: store.js:3 ~ esDict:", esDict)
 import engDict from './common/i18n/eng.json'
-console.log("🚀 ~ file: store.js:5 ~ engDict:", engDict)
+const isMobile = window.innerWidth < 750
 // Create a new store instance.
 export const store = createStore({
     state () {
         return {
-            locale: ["ES", "ENG"]
+            locale: ["ES", "ENG"],
+            mobile: isMobile,
+            isNavOpen: isMobile ? false : true,
+            desktopWidthForHome: window.innerWidth - 280 + 'px'
         }
     },
     mutations: {
@@ -18,13 +20,15 @@ export const store = createStore({
     },
     actions: {
         setLocale({commit}, localeName){
-            console.log("🚀 ~ file: store.js:21 ~ setLocale ~ localeName:", localeName)
             commit('SET_LOCALE_LANG', localeName)
+        },
+        toggleNavBar ({state}) {
+            state.isNavOpen = !state.isNavOpen
+            console.log("🚀 ~ toggleNavBar ~ state:", state)
         }
     },
     getters:{
         getLocale: (state) => {
-            console.log("🚀 ~ file: store.js:29 ~ state:", state)
             return state.locale
         }
     }

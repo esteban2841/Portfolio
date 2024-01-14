@@ -1,3 +1,15 @@
+html, body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  font-weight: normal;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
 
 #app {
   padding: 0;
@@ -7,14 +19,9 @@
   height: 100%;
   font-weight: normal;
   box-sizing: border-box;
-}
-body{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  font-weight: normal;
+  background-color: #212121;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 header{
   box-sizing: border-box;
@@ -26,11 +33,3 @@ header{
 }
 
 
-@media (hover: hover) {
-}
-
-@media (min-width: 1024px) {
-  #app {
-    display: flex;
-  }
-}

@@ -3,6 +3,12 @@ import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior( to, from, savedPosition){
+    return {
+      el: '#'+ to,
+      top: 0
+    }
+  },
   routes: [
     {
       path: '/',
@@ -17,7 +23,7 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     }
-  ]
+  ],
 })
 
 export default router

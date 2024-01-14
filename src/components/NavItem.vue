@@ -1,27 +1,50 @@
 <template>
-    <nav class="navBar">
+    <nav class="navBar" v-show="isNavOpen">
         <PhotoSection/>
         <SocialNetworks/>
         <BorderBook/>
     </nav>
 </template>
-<script setup lang="ts">
-    import { RouterLink } from 'vue-router'
-    import ConsoleIcon from './icons/ConsoleIcon.vue'
+<script lang="ts">
     import SocialNetworks from './SocialNetworks.vue';
     import PhotoSection from './PhotoSection.vue';
-    import BorderBook from "./"
+    import BorderBook from "./BorderBook.vue"
+    import { mapActions, mapState } from 'vuex'
+    export default {
+        data() {
+            return {
+                
+            }
+        },
+        computed:{
+            ...mapState(['mobile', 'isNavOpen'])
+        },
+        methods:{
+            ...mapActions(['toggleNavBar'])
+        },
+        components:{
+            SocialNetworks,
+            PhotoSection,
+            BorderBook
+        }
+    }
 </script>
 <style scoped>
-.navBar {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 260px;
-    background-color: #212121;
-    height: 100vh;
-    box-sizing: border-box;
-}
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 260px;
+        background-color: #212121;
+        height: 100vh;
+        box-sizing: border-box;
+    }
 
+    @media (max-width: 750px){
+        .navBar{
+            width:100%;
+            position: relative;
+        }
+    }
 
 </style>
