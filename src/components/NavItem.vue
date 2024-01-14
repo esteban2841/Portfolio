@@ -38,6 +38,7 @@
         background-color: #212121;
         height: 100vh;
         box-sizing: border-box;
+        z-index: 2;
     }
 
     @media (max-width: 750px){

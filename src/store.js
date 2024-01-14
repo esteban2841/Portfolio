@@ -9,7 +9,7 @@ export const store = createStore({
             locale: ["ES", "ENG"],
             mobile: isMobile,
             isNavOpen: isMobile ? false : true,
-            desktopWidthForHome: window.innerWidth - 280 + 'px'
+            desktopWidthForHome: window.innerWidth - 280 -20 + 'px'
         }
     },
     mutations: {
