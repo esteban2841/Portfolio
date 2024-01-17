@@ -1,5 +1,5 @@
 <script  lang="ts">
-  import { MenuIcon } from "heroicons-vue3/solid"
+  import { MenuIcon, ChevronDoubleDownIcon } from "heroicons-vue3/solid"
   import { mapActions, mapState } from 'vuex'
   import ParticlesImplemented from './../components/home/ParticlesImplemented.vue'
   import Particles from "@tsparticles/vue3";
@@ -17,14 +17,22 @@
       }
     },
     methods: {
-      ...mapActions(['toggleNavBar'])
+      ...mapActions(['toggleNavBar']),
+      getSelectedViewName (event) {
+				console.log("TCL: getSelectedViewName -> event", event)
+        const selectedView = event.target.classList[0]
+				console.log("TCL: getSelectedViewName -> selectedView", selectedView)
+				console.log("TCL: getSelectedViewName -> this.$store", this.$store, selectedView)
+        this.$store.dispatch('scrollToSection', selectedView);
+      }
     },
     computed:{
       ...mapState(['isNavOpen', 'mobile', 'desktopWidthForHome'])
     },
     components: {
       MenuIcon,
-      ParticlesImplemented
+      ParticlesImplemented,
+      ChevronDoubleDownIcon,
     },
     mounted() {
       ParticlesChunk.use(Particles, {
@@ -52,6 +60,9 @@
         <p class="fourth-line"> also an Industrial Engineer</p>
 
       </div>
+      <button class="about icon-container" @click="getSelectedViewName">
+        <ChevronDoubleDownIcon class="about menu-icon" @click="getSelectedViewName"/>
+      </button>
     </div>
 
     <ParticlesImplemented/>
@@ -96,7 +107,13 @@
     }
   }
   
-  
+  .icon-container{
+    background-color: var(--primary-bg-color);
+    border: none;
+    position: absolute;
+    bottom: -150px;
+  }
+
   .navOpenedMobile{
     top: 100vh;
     position: relative;

@@ -18,7 +18,11 @@
     },
     computed:{
       ...mapState(['isNavOpen','desktopWidthForHome'])
-    }
+    },
+    mounted() {
+			console.log("TCL: mounted -> this.$store", this.$store)
+      this.$store.commit('SET_REF', this.$refs);
+    },
   }
 </script>
 
@@ -27,8 +31,9 @@
     <NavItem/>
   </header>
   <div class="right-section-container">
-    <Home/>
-    <About/>
+    <Home ref="home"/>
+    <About ref="about"/>
+    <!-- <ProjectsView/> -->
   </div>
 
 </template>

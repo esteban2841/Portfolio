@@ -17,7 +17,11 @@ export const store = createStore({
         SET_LOCALE_LANG (state, key) {
             state.locale = key
             
+        },
+        SET_REF(state, payload) {
+            state.ref = payload;
         }
+         
     },
     actions: {
         setLocale({commit}, localeName){
@@ -27,9 +31,8 @@ export const store = createStore({
             state.isNavOpen = !state.isNavOpen
             console.log("🚀 ~ toggleNavBar ~ state:", state)
         },
-        setActiveView (state, view){
-            state.activeView = view
-			console.log("TCL: setActiveView -> state.activeView", state.activeView)
+        scrollToSection({ commit, state }, section) {
+            state.ref[section].$el.scrollIntoView({ behavior: 'smooth' });
         },
     },
     getters:{
