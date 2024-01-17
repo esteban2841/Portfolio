@@ -1,7 +1,7 @@
 <script  lang="ts">
   import { MenuIcon } from "heroicons-vue3/solid"
   import { mapActions, mapState } from 'vuex'
-  import ParticlesImplemented from './../components/ParticlesImplemented.vue'
+  import ParticlesImplemented from './../components/home/ParticlesImplemented.vue'
   export default {
     data() {
       return {
@@ -70,5 +70,7 @@
   .menu-icon{
     width: 40px;
     fill: #fff !important;
+    z-index: 5;
+    position: absolute;
   }
   </style>

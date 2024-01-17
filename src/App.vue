@@ -1,6 +1,6 @@
 <script lang="ts">
   import { RouterView } from 'vue-router'
-  import NavItem from './components/NavItem.vue';
+  import NavItem from './components/navBar/NavItem.vue';
   import { mapState } from "vuex";
 
   export default {

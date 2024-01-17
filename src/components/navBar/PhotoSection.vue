@@ -11,7 +11,7 @@
             </div>
             <div class="change-settings-container">
                 <div class="theme-settings-container">
-                    <SunIcon class="sun-icon"/>
+                        <SunIcon class="sun-icon"/>
                 </div>
                 <div class="locale-settings-container">
                     <span class="translate-icon">
@@ -112,6 +112,10 @@
     .change-settings-container{
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 15px
+
     }
     .sun-icon{
         fill: yellow;
@@ -120,7 +124,7 @@
     }
     .theme-settings-container{
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         width: 50px;
         height: 50px;
