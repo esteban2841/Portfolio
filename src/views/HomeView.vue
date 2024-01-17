@@ -17,7 +17,8 @@
       ...mapState(['isNavOpen', 'mobile', 'desktopWidthForHome'])
     },
     components: {
-      MenuIcon
+      MenuIcon,
+      ParticlesImplemented
     },
     mounted() {
       console.log("🚀 ~ data ~ this.desktopWidthForHome:", this.desktopWidthForHome)
@@ -45,10 +46,6 @@
     position: absolute;
   }
   
-  .menu-icon{
-    width: 40px;
-    fill: #fff;
-  }
   
   .navOpenedMobile{
     top: 100vh;
@@ -69,5 +66,9 @@
     height: 100vh;
     left: 280px;
     background-color: #212121;
+  }
+  .menu-icon{
+    width: 40px;
+    fill: #fff !important;
   }
   </style>
