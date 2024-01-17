@@ -2,6 +2,12 @@
   import { MenuIcon } from "heroicons-vue3/solid"
   import { mapActions, mapState } from 'vuex'
   import ParticlesImplemented from './../components/home/ParticlesImplemented.vue'
+  import Particles from "@tsparticles/vue3";
+  import { loadFull } from "tsparticles";
+  import { createApp } from 'vue'
+
+  const ParticlesChunk = createApp(ParticlesImplemented)
+
   export default {
     data() {
       return {
@@ -22,7 +28,13 @@
     },
     mounted() {
       console.log("🚀 ~ data ~ this.desktopWidthForHome:", this.desktopWidthForHome)
-      
+      ParticlesChunk.use(Particles, {
+            init: async engine => {
+            await loadFull(engine); // you can load the full tsParticles library from "tsparticles" if you need it
+            // await loadSlim(engine); // or you can load the slim version from "@tsparticles/slim" if don't need Shapes or Animations
+        },
+      })
+      ParticlesChunk.mount('#tsparticles')
     },
   }
 </script>

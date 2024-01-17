@@ -39,7 +39,7 @@
         position: fixed;
         width: 260px;
         background-color: var(--primary-bg-color);
-        height: 100vh;
+        height: 100%;
         box-sizing: border-box;
         z-index: 2;
     }

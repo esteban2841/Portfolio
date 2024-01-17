@@ -1,5 +1,5 @@
 <template >
-    <div class="border-container" @click="toggleNavBar" v-show="!mobile">
+    <div class="border-container" v-show="!mobile">
         
     </div>
 </template>
