@@ -9,7 +9,8 @@ export const store = createStore({
             locale: ["ES", "ENG"],
             mobile: isMobile,
             isNavOpen: isMobile ? false : true,
-            desktopWidthForHome: window.innerWidth - 280 -20 + 'px'
+            desktopWidthForHome: window.innerWidth - 280 -20 + 'px',
+            activeView: "home",
         }
     },
     mutations: {
@@ -25,7 +26,11 @@ export const store = createStore({
         toggleNavBar ({state}) {
             state.isNavOpen = !state.isNavOpen
             console.log("🚀 ~ toggleNavBar ~ state:", state)
-        }
+        },
+        setActiveView (state, view){
+            state.activeView = view
+			console.log("TCL: setActiveView -> state.activeView", state.activeView)
+        },
     },
     getters:{
         getLocale: (state) => {

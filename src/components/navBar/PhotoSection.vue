@@ -34,7 +34,7 @@
 
 </template>
 <script lang="ts">
-    import photo from '../assets/foto-mask-left.png'
+    import photo from '../../assets/foto-mask-left.png'
     import {XIcon} from 'heroicons-vue3/solid'
     import {SunIcon} from 'heroicons-vue3/solid'
     import { TranslateIcon } from "heroicons-vue3/solid"
@@ -67,7 +67,7 @@
 <style scoped>
     .close-container{
         display: flex;
-        background-color: #212121;
+        background-color: var(--primary-bg-color);
         padding: 10px;
         width: 100%;
         height: 70px;

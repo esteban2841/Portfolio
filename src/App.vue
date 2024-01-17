@@ -2,6 +2,8 @@
   import { RouterView } from 'vue-router'
   import NavItem from './components/navBar/NavItem.vue';
   import { mapState } from "vuex";
+  import Home from './views/HomeView.vue';
+  import About from './views/AboutView.vue';
 
   export default {
     data() {
@@ -11,10 +13,11 @@
     },
     components:{
       NavItem,
-      RouterView
+      Home,
+      About
     },
     computed:{
-      ...mapState(['isNavOpen'])
+      ...mapState(['isNavOpen','desktopWidthForHome'])
     }
   }
 </script>
@@ -23,7 +26,11 @@
   <header v-show="isNavOpen">
     <NavItem/>
   </header>
-  <RouterView />
+  <div class="right-section-container">
+    <Home/>
+    <About/>
+  </div>
+
 </template>
 
 <style scoped>
@@ -31,7 +38,12 @@ header {
   padding: 0;
   margin: 0;
   width: 260px;
-  height: 100%;
+}
+
+.right-section-container{
+  left: 280px;
+  width: v-bind(desktopWidthForHome);
+  position: absolute;
 }
 
 @media (max-width: 750px){

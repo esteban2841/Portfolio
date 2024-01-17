@@ -1,5 +1,5 @@
 <template >
-    <div id="tsparticles">
+    <div class="paticles-container">
         <vue-particles id="tsparticles" :particlesLoaded="particlesLoaded" url="http://foo.bar/particles.json" />
 
         <vue-particles
@@ -82,11 +82,28 @@
 <script lang="ts">
 
 export default {
+    data() {
+        return {
+            
+        }
+    },
     components:{
-    }
+    },
+    mounted() {
+        let rootStyles = getComputedStyle(document.documentElement);
+		console.log("TCL: rootStyles", rootStyles)
+        
+    },
+        
+    
 };
 </script>
 <style >
+    .paticles-container{
+        width: 700px !important;
+        height: 100vh !important;
+        position: relative;
+    }
 </style>
 
 

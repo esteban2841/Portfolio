@@ -39,38 +39,34 @@
 <style>
   .home-section{
     box-sizing: border-box;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    background-color: #212121;
     padding: 20px;
-    position: absolute;
+    position: relative;
   }
   
   
   .navOpenedMobile{
     top: 100vh;
-    position: absolute;
+    position: relative;
     height: 100vh;
     width: 100%;
-    background-color: #212121
   }
   .NavClosedMobile{
     top: 0;
-    position: absolute;
+    position: relative;
     height: 100vh;
     width: 100%;
-    background-color: #212121
   }
   .navOpenedDesktop{
     top: 0;
     height: 100vh;
     left: 280px;
-    background-color: #212121;
   }
   .menu-icon{
     width: 40px;
     fill: #fff !important;
     z-index: 5;
-    position: absolute;
+    position: relative;
   }
   </style>

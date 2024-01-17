@@ -1,6 +1,7 @@
 <template>
     <nav class="navBar" v-show="isNavOpen">
         <PhotoSection/>
+        <SectionTags/>
         <SocialNetworks/>
         <BorderBook/>
     </nav>
@@ -10,6 +11,7 @@
     import PhotoSection from './PhotoSection.vue';
     import BorderBook from "./BorderBook.vue"
     import { mapActions, mapState } from 'vuex'
+    import SectionTags from './SectionTags.vue';
     export default {
         data() {
             return {
@@ -23,10 +25,11 @@
             ...mapActions(['toggleNavBar'])
         },
         components:{
-            SocialNetworks,
-            PhotoSection,
-            BorderBook
-        }
+    SocialNetworks,
+    PhotoSection,
+    BorderBook,
+    SectionTags
+}
     }
 </script>
 <style scoped>
@@ -35,7 +38,7 @@
         flex-direction: column;
         position: fixed;
         width: 260px;
-        background-color: #212121;
+        background-color: var(--primary-bg-color);
         height: 100vh;
         box-sizing: border-box;
         z-index: 2;
