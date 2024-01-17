@@ -67,7 +67,6 @@
 <style scoped>
     .close-container{
         display: flex;
-        background-color: var(--primary-bg-color);
         padding: 10px;
         width: 100%;
         height: 70px;
@@ -100,6 +99,7 @@
         flex-direction: row;
         justify-content: space-between;
         margin-top: 50px;
+        align-items: flex-end;
         width: 100%;
     }
     .photo-container{
@@ -107,6 +107,7 @@
         height: 90px;
         img{
             height: 92px;
+            border-radius: 5px;
         }
     }
     .change-settings-container{
@@ -147,7 +148,8 @@
     .locale-settings-container{
         width: 86px;
         height: 42px;
-        background-color: #363636;
+        background-color: var(--secondary-bg-color);
+        border-radius: 5px;
         display: flex;
         flex-direction: row;
         justify-content: center;

@@ -42,6 +42,7 @@
         height: 100%;
         box-sizing: border-box;
         z-index: 2;
+        opacity: .95;
     }
 
     @media (max-width: 750px){

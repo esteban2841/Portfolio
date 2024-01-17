@@ -37,7 +37,7 @@
         bottom: 0px;
         width: 258px;
         height: 92px;
-        background-color: #3C4043;
+        background-color: var(--secondary-bg-color);
         box-sizing: border-box;
         position:absolute;
         @media (max-width: 750px){

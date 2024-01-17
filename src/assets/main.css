@@ -2,8 +2,23 @@
   --primary-bg-color: #212121;
   --secondary-bg-color: #3C4043;
   --primary-font-color: #fff;
+  --secondary-font-color: #fad201;
+  --third-font-color: #6573C3;
+  --fourth-font-color: #8f90c7;
   --primary-border-color: #6573C3;
-  
+  --project-border-color: #22a4a7;
+  .background-main-color{
+    background: rgb(71, 17, 137);
+    background: linear-gradient(
+      45deg,
+      rgba(71, 17, 137, 0.9752275910364145) 0%,
+      rgba(69, 16, 132, 1) 5%,
+      rgba(69, 17, 135, 0.989233193277311) 9%,
+      rgba(53, 7, 93, 0.989233193277311) 47%,
+      rgba(19, 5, 78, 0.969625350140056) 90%
+    );
+    color: rgb(71, 17, 137);;
+  }
 }
 
 html, body{

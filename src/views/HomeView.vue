@@ -27,7 +27,6 @@
       ParticlesImplemented
     },
     mounted() {
-      console.log("🚀 ~ data ~ this.desktopWidthForHome:", this.desktopWidthForHome)
       ParticlesChunk.use(Particles, {
             init: async engine => {
             await loadFull(engine); // you can load the full tsParticles library from "tsparticles" if you need it
@@ -45,6 +44,16 @@
   || !isNavOpen && mobile && 'views-container NavClosedMobile'
   ]">
     <MenuIcon class="menu-icon" @click="toggleNavBar" v-show="!isNavOpen"/>
+    <div class="title-container">
+      <h1 class="first-line">Esteban</h1>
+      <h1 class="second-line">Puentes</h1>
+      <div class="professions-title">
+        <p class="tirdh-line">Full stack developer</p>
+        <p class="fourth-line"> also an Industrial Engineer</p>
+
+      </div>
+    </div>
+
     <ParticlesImplemented/>
   </section>
 </template>
@@ -55,6 +64,36 @@
     width: 100%;
     padding: 20px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    line-height: 0px;
+    left: 0;
+    z-index: 2;
+    color: #fff;
+    font-family: 'Philosopher', sans-serif;
+    h1{
+      font-size: 60px;
+      color: var(--primary-border-color);
+    }
+    p{
+      font-family: 'Philosopher', sans-serif;
+      font-style: italic;
+      font-size: 20px;
+    }
+    .professions-title{
+      display: flex;
+      gap: 5px;
+    }
   }
   
   
