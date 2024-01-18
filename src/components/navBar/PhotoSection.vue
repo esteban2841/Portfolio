@@ -18,10 +18,11 @@
                         <TranslateIcon class="translate"/>
                     </span>
                     <span class="lang">
-                        <div @click="getLocale">
+                        <div @click="openLocaleList">
+                            {{ lang }}
                         </div>
-                        <ul class="lang-list" >
-                            <li v-for="(localeName, index) in locale" :key="index">{{ localeName }}</li>
+                        <ul class="lang-list" v-show="isLocaleListOpen">
+                            <li v-for="(localeName, index) in locale" :key="index" @click="setLocaleLang(localeName)">{{ t$(localeName) }}</li>
                         </ul>
                     </span>
                     <span class="down-arrow-container">
@@ -43,15 +44,14 @@
         data (){
             return {
                 photo,
-                locale: this.locale
             }
         },
         computed:{
-            ...mapState(['locale', 'mobile', 'isNavOpen']),
+            ...mapState(['locale', 'mobile', 'isNavOpen', 'lang','isLocaleListOpen']),
             ...mapGetters(['getLocale'])
         },
         methods:{
-            ...mapActions(['setLocale', 'toggleNavBar'])
+            ...mapActions(['setLocaleLang', 'toggleNavBar', 'openLocaleList','t$'])
         },
         components: {
             XIcon,
@@ -146,18 +146,29 @@
         height: 30px;
     }
     .locale-settings-container{
-        width: 86px;
+        width: 100px;
         height: 42px;
         background-color: var(--secondary-bg-color);
         border-radius: 5px;
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        gap: 10px;
+        color: var(--primary-font-color)
     }
 
     .lang-list{
         list-style-type: none;
-        padding: 0px;
+        padding: 5px 20px;
+        position: absolute;
+        left: 14px;
+        border-radius: 5px;
+        background-color: var(--secondary-bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 </style>

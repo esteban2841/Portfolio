@@ -1,6 +1,6 @@
 <template >
     <div class="paticles-container">
-        <vue-particles id="tsparticles" :particlesLoaded="particlesLoaded" url="http://foo.bar/particles.json" />
+        <vue-particles id="tsparticles" :particlesLoaded="particlesLoaded" />
 
         <vue-particles
             id="tsparticles"
@@ -89,12 +89,6 @@ export default {
     },
     components:{
     },
-    mounted() {
-        let rootStyles = getComputedStyle(document.documentElement);
-		console.log("TCL: rootStyles", rootStyles)
-        
-    },
-        
     
 };
 </script>

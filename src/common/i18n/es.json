@@ -1,5 +1,12 @@
 {
     "es":{
-        "spanish":"español"
+        "spanish":"Español",
+        "english": "Inglés",
+        "portuguese": "Portugués",
+        "es":"Español",
+        "eng": "Inglés",
+        "pt": "Portugués",
+        "profession_text_first_line": "Desarrollador full stack",
+        "profession_text_snd_line": " espera... Tambien ingeniero industrial"
     }
 }

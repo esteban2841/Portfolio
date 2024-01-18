@@ -1,5 +1,12 @@
 {
     "eng":{
-        "spanish":"spanish"
+        "spanish":"spanish",
+        "english": "English",
+        "portuguese": "Portuguese",
+        "es":"spanish",
+        "eng": "English",
+        "pt": "Portuguese",
+        "profession_text_first_line": "Full stack developer",
+        "profession_text_snd_line": " also an Industrial Engineer"
     }
 }

@@ -17,17 +17,20 @@
       }
     },
     methods: {
-      ...mapActions(['toggleNavBar']),
+      ...mapActions(['toggleNavBar', 't$']),
       getSelectedViewName (event) {
-				console.log("TCL: getSelectedViewName -> event", event)
-        const selectedView = event.target.classList[0]
-				console.log("TCL: getSelectedViewName -> selectedView", selectedView)
-				console.log("TCL: getSelectedViewName -> this.$store", this.$store, selectedView)
+        const selectedView = event.currentTarget.classList[0]
         this.$store.dispatch('scrollToSection', selectedView);
-      }
+      },
     },
     computed:{
-      ...mapState(['isNavOpen', 'mobile', 'desktopWidthForHome'])
+      ...mapState(['isNavOpen', 'mobile', 'desktopWidthForHome']),
+      professionFirstLine() {
+        return this.$store.dispatch('t$', 'profession_text_first_line');
+      },
+      professionSecondLine() {
+        return this.$store.dispatch('t$', 'profession_text_snd_line');
+ }
     },
     components: {
       MenuIcon,
@@ -56,12 +59,12 @@
       <h1 class="first-line">Esteban</h1>
       <h1 class="second-line">Puentes</h1>
       <div class="professions-title">
-        <p class="tirdh-line">Full stack developer</p>
-        <p class="fourth-line"> also an Industrial Engineer</p>
+        <p class="tirdh-line">{{professionFirstLine}}</p>
+        <p class="fourth-line">{{professionSecondLine}}</p>
 
       </div>
-      <button class="about icon-container" @click="getSelectedViewName">
-        <ChevronDoubleDownIcon class="about menu-icon" @click="getSelectedViewName"/>
+      <button class="about icon-container" @click.prevent="getSelectedViewName">
+        <ChevronDoubleDownIcon class="about menu-icon"/>
       </button>
     </div>
 

@@ -20,7 +20,6 @@
       ...mapState(['isNavOpen','desktopWidthForHome'])
     },
     mounted() {
-			console.log("TCL: mounted -> this.$store", this.$store)
       this.$store.commit('SET_REF', this.$refs);
     },
   }
