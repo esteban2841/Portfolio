@@ -4,9 +4,14 @@
         "english": "Inglês",
         "portuguese": "Português",
         "es": "Espanhol",
-        "eng": "Inglês",
+        "en": "Inglês",
         "pt": "Português",
         "profession_text_first_line": "Desenvolvedor full stack",
-        "profession_text_snd_line": " sò...? Também engenheiro industrial"
+        "profession_text_snd_line": " sò...? Também engenheiro industrial",
+        "home_section_text": "Inicio",
+        "about_section_text": "Sobre mim",
+        "skills_section_text": "Habilidades",
+        "projects_section_text": "Projetos",
+        "contact_section_text": "Contato"
     }
 }

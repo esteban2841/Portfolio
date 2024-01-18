@@ -7,6 +7,10 @@
   --fourth-font-color: #8f90c7;
   --primary-border-color: #6573C3;
   --project-border-color: #22a4a7;
+  --left-card-bg-color:#FA1C17;
+  --center-card-bg-color: #F65B2B;
+  --right-card-bg-color: #FABD27;
+
   .background-main-color{
     background: rgb(71, 17, 137);
     background: linear-gradient(

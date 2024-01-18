@@ -17,20 +17,14 @@
       }
     },
     methods: {
-      ...mapActions(['toggleNavBar', 't$']),
+      ...mapActions(['toggleNavBar',]),
       getSelectedViewName (event) {
         const selectedView = event.currentTarget.classList[0]
         this.$store.dispatch('scrollToSection', selectedView);
-      },
+      }
     },
     computed:{
-      ...mapState(['isNavOpen', 'mobile', 'desktopWidthForHome']),
-      professionFirstLine() {
-        return this.$store.dispatch('t$', 'profession_text_first_line');
-      },
-      professionSecondLine() {
-        return this.$store.dispatch('t$', 'profession_text_snd_line');
- }
+      ...mapState(['isNavOpen', 'mobile', 'desktopWidthForHome'])
     },
     components: {
       MenuIcon,
@@ -59,8 +53,8 @@
       <h1 class="first-line">Esteban</h1>
       <h1 class="second-line">Puentes</h1>
       <div class="professions-title">
-        <p class="tirdh-line">{{professionFirstLine}}</p>
-        <p class="fourth-line">{{professionSecondLine}}</p>
+        <p class="tirdh-line">{{ $t('profession_text_first_line') }}</p>
+        <p class="fourth-line">{{$t('profession_text_snd_line')}}</p>
 
       </div>
       <button class="about icon-container" @click.prevent="getSelectedViewName">

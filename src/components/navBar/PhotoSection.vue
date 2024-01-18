@@ -19,10 +19,10 @@
                     </span>
                     <span class="lang">
                         <div @click="openLocaleList">
-                            {{ lang }}
+                            {{ $t(lang) }}
                         </div>
                         <ul class="lang-list" v-show="isLocaleListOpen">
-                            <li v-for="(localeName, index) in locale" :key="index" @click="setLocaleLang(localeName)">{{ t$(localeName) }}</li>
+                            <li v-for="(localeName, index) in locale" :key="index" @click="changeLocale(localeName)">{{ $t(localeName) }}</li>
                         </ul>
                     </span>
                     <span class="down-arrow-container">
@@ -51,7 +51,14 @@
             ...mapGetters(['getLocale'])
         },
         methods:{
-            ...mapActions(['setLocaleLang', 'toggleNavBar', 'openLocaleList','t$'])
+            ...mapActions(['toggleNavBar', 'openLocaleList', 'setLocaleLang']),
+            changeLocale(locale) {
+				console.log("TCL: changeLocale -> locale", locale)
+                this.$i18n.locale = locale
+                this.setLocaleLang(locale)
+                this.openLocaleList()
+
+            }
         },
         components: {
             XIcon,
@@ -59,8 +66,6 @@
             TranslateIcon
         },
         mounted () {
-            const log = this.getLocale
-            console.log("🚀 ~ file: PhotoSection.vue:64 ~ mounted ~ log:", log)
         }
     }
 </script>
@@ -146,7 +151,7 @@
         height: 30px;
     }
     .locale-settings-container{
-        width: 100px;
+        width: 130px;
         height: 42px;
         background-color: var(--secondary-bg-color);
         border-radius: 5px;
@@ -162,13 +167,16 @@
     .lang-list{
         list-style-type: none;
         padding: 5px 20px;
+        gap: 5px;
         position: absolute;
-        left: 14px;
+        left: -20px;
         border-radius: 5px;
         background-color: var(--secondary-bg-color);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-transform: uppercase;
+        z-index: 5;
     }
 </style>

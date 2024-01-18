@@ -1,12 +1,18 @@
 {
-    "eng":{
-        "spanish":"spanish",
+    "en":{
+        "spanish":"Spanish",
         "english": "English",
         "portuguese": "Portuguese",
-        "es":"spanish",
-        "eng": "English",
+        "es":"Spanish",
+        "en": "English",
         "pt": "Portuguese",
         "profession_text_first_line": "Full stack developer",
-        "profession_text_snd_line": " also an Industrial Engineer"
+        "profession_text_snd_line": " also an Industrial Engineer",
+        "home_section_text": "Home",
+        "about_section_text": "About",
+        "skills_section_text": "Skills",
+        "projects_section_text": "Projects",
+        "contact_section_text": "Contact"
+
     }
 }

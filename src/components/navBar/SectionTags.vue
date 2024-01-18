@@ -2,23 +2,23 @@
     <div class="section-container">
         <a class="home section-tag" @click="getSelectedViewName">
             <HomeIcon class="section-icon"/>
-            <h2>Home</h2>
+            <h2>{{$t('home_section_text')}}</h2>
         </a>
         <a class="about section-tag" @click="getSelectedViewName">
             <UserIcon class="section-icon"/>
-            <h2>About</h2>
+            <h2>{{$t('about_section_text')}}</h2>
         </a>
         <a class="skills section-tag" @click="getSelectedViewName">
             <InformationCircleIcon  class="section-icon"/>
-            <h2>Skills</h2>
+            <h2>{{$t('skills_section_text')}}</h2>
         </a>
         <a class="projects section-tag" @click="getSelectedViewName">
             <ArchiveIcon class="section-icon"/>
-            <h2>Projects</h2>
+            <h2>{{$t('projects_section_text')}}</h2>
         </a>
         <a class="contact section-tag" @click="getSelectedViewName">
             <MailOpenIcon class="section-icon"/>
-            <h2>Contact</h2>
+            <h2>{{$t('contact_section_text')}}</h2>
         </a>
 
     </div>
