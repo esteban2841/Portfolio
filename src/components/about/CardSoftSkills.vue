@@ -1,8 +1,8 @@
-<template lang="">
+<template >
     <div card-container>
     </div>
 </template>
-<script>
+<script lang="ts">
 export default {
     props: ['width', 'height'],
     data() {
@@ -14,12 +14,13 @@ export default {
     
 }
 </script>
-<style lang="">
+<style >
     .card-container{
         width: 50px;
         height: 50px;
         background-color: #fff;
         position:relative;
+        display:flex;
     }
     .left{
         background-color: var(--left-card-bg-color);

@@ -1,13 +1,30 @@
 <template>
   <div class="about-container">
     <h1>SOBRE MI</h1>
-    <CardSoftSkills/>
+    <CardSoftSkills v-for="(card, index) in cards" :key="index" {{ card.name }} />
   </div>
 </template>
 
 <script lang="ts">
   import CardSoftSkills from './../components/about/CardSoftSkills.vue'
+  const cards = [
+    {
+      name: $t("multicultural_text"),
+      
+
+    },
+    {
+      name: "hola aca ando",
+      
+
+    },
+  ]
   export default {
+    data() {
+      return {
+        cards
+      }
+    },
     components:{
       CardSoftSkills
     }
