@@ -78,6 +78,13 @@
         gap: 40px;
     }
 
+    .section-tag:hover{
+        cursor: pointer;
+        padding-left: 5px;
+        border-radius: 10px;
+        background-color: var(--secondary-bg-color);
+    }
+
     .section-icon{
         width: 24px;
         height: 24px;

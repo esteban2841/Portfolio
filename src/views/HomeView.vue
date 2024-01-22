@@ -109,6 +109,17 @@
     border: none;
     position: absolute;
     bottom: -150px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+  }
+
+  .icon-container:hover{
+    background-color: var(--secondary-bg-color);
+    border: none;
+    cursor: pointer;
   }
 
   .navOpenedMobile{

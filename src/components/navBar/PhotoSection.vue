@@ -153,7 +153,7 @@
     .locale-settings-container{
         width: 130px;
         height: 42px;
-        background-color: var(--secondary-bg-color);
+        background-color: transparent;
         border-radius: 5px;
         position: relative;
         display: flex;
@@ -162,6 +162,11 @@
         align-items: center;
         gap: 10px;
         color: var(--primary-font-color)
+    }
+
+    .locale-settings-container:hover{
+        cursor: pointer;
+        background-color: var(--secondary-bg-color);
     }
 
     .lang-list{
