@@ -14,7 +14,21 @@
         "projects_section_text": "Projects",
         "contact_section_text": "Contact",
         "multicultural_text": "Multicultural",
-        "multicultural_description": "Experience in world wide companies and team enviroments, makes me more empathetic and more competitive in different markets"
+        "multicultural_description": "Experience in world wide companies and team enviroments, makes me more empathetic and more competitive in different markets",
+        "academic_cerfication_text": "Academic cerfication",
+        "academic_cerfication_description": "An university degree in engineering and academic certifications that gave me strong tools becoming a very resolutive and analitic person with logic thinking",
+        "fast_learner_text": "Fast learning and flexibility",
+        "fast_learner_description": "A fast learner, willing to learn new technologies as projects' demands",
+        "polyglot_text": "Polyglot",
+        "polyglot_description": "Fluent speaker in Spanish, English and Portuguese",
+        "task_complection_text": "Task complection",
+        "task_complection_description": "Oriented to finallyze tasks proactively and diligently",
+        "team_work_text": "Team player",
+        "team_work_description": "A great deal of experience working in, and leading, multidisciplinary teams",
+        "metrics_text": "Metrics analisys",
+        "metrics_description": "Expertize on managing teams and helping coworkers to improve based on metrics",
+        "self_improvement_text": "Self improvement",
+        "self_improvement_description": "Hability to self evaluation and continuous improvement"
 
     }
 }

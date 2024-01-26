@@ -20,6 +20,8 @@
     "@mdi/js": "^7.3.67",
     "@tsparticles/vue3": "^3.0.0",
     "heroicons-vue3": "^1.0.2",
+    "oh-vue-icons": "^1.0.0-rc3",
+    "pdfvuer": "^2.0.1",
     "tsparticles": "^3.1.0",
     "vue": "^3.3.4",
     "vue-i18n": "^9.9.0",
