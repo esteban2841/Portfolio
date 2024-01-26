@@ -102,6 +102,7 @@
       CardSoftSkills,
       GlobeIcon,
       AcademicCapIcon,
+      pdfvuer
     },
     computed:{
       localeUsage (){
