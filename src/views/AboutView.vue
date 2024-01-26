@@ -1,7 +1,7 @@
 <template>
   <div class="about-container">
     <h1>{{ $t('about_section_text') }}</h1>
-    <pdfvuer src="../../public/CV_ENGLISH.pdf"></pdfvuer>
+    <pdf-embed :source="pdfUrl"></pdf-embed>
     <div class="cards-container ">
         <CardSoftSkills v-for="(card, index) in cards" :key="index" :name="card.name" :name2="card.name2" :backImage="card.backgroundImage[index]" :icon="card.icon" :ohVue="card.ohVue"/>
     </div>
@@ -18,7 +18,7 @@
   import kTreboles from "./../assets/cards/k-treboles.png"
   import kPicas from "./../assets/cards/k-picas.png"
   import { GlobeIcon, AcademicCapIcon } from 'heroicons-vue3/solid'
-  import pdfvuer from 'pdfvuer';
+  import PdfEmbed from 'vue-pdf-embed';
   
   
 
@@ -95,14 +95,15 @@
   export default {
     data() {
       return {
-        cards
+        cards,
+        pdfUrl: '../../public/CV_ENGLISH.pdf'
       }
     },
     components:{
       CardSoftSkills,
       GlobeIcon,
       AcademicCapIcon,
-      pdfvuer
+      PdfEmbed
     },
     computed:{
       localeUsage (){
