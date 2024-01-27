@@ -20,7 +20,10 @@
     </div>
     <!-- <pdf-embed :source="pdfUrl"></pdf-embed> -->
     <div class="cards-container ">
-        <CardSoftSkills v-for="(card, index) in cards" :key="index" :name="card.name" :name2="card.name2" :backImage="card.backgroundImage[index]" :icon="card.icon" :ohVue="card.ohVue"/>
+        <CardSoftSkills v-for="(card, index) in cards" :key="index" :name="card.name" :name2="card.name2" :backImage="card.backgroundImage[index]" :icon="card.icon" :ohVue="card.ohVue"/> 
+    </div>
+    <div class="cards-technologies">
+      <CardTechnologies v-for="(card, index) in cardsTechnologies" :key="index" :name="card.name" :icon="card.icon" :ohVue="card.ohVue"/>
     </div>
   </div>
 </template>
@@ -36,9 +39,8 @@
   import kPicas from "./../assets/cards/k-picas.png"
   import { GlobeIcon, AcademicCapIcon } from 'heroicons-vue3/solid'
   import { mapActions } from 'vuex'
-  
-
   import CardSoftSkills from './../components/about/CardSoftSkills.vue'
+  import CardTechnologies from './../components/about/CardTechnologies.vue'
 
   const cardPictures = [ asCorazones, asDiamantes, asTreboles, asPicas, kCorazones, kDiamantes, kTreboles, kPicas]
   const cardIcons = [ GlobeIcon, ]
@@ -108,6 +110,14 @@
       
     },
   ]
+
+  const cardsTechnologies = [
+    {
+      name: 'Mongo',
+      ohVue: 'vi-file-type-mongo'
+    },
+  ]
+  console.log("TCL: cardsTechnologies", cardsTechnologies)
   export default {
     data() {
       return {
@@ -118,6 +128,7 @@
       CardSoftSkills,
       GlobeIcon,
       AcademicCapIcon,
+      CardTechnologies
     },
     methods:{
       ...mapActions(['toggleCvFile'])
@@ -156,6 +167,18 @@
   flex-wrap: wrap;
   max-width: 900px;
   height: 140vh;
+  position: relative;
+}
+.cards-technologies{
+  display: flex;
+  flex-direction: row;
+  gap: 30px 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  position: relative;
+  width: 100%;
+  height: 100vh
 }
 
 .about-title{
