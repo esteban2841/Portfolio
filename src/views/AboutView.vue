@@ -22,6 +22,7 @@
     <div class="cards-container ">
         <CardSoftSkills v-for="(card, index) in cards" :key="index" :name="card.name" :name2="card.name2" :backImage="card.backgroundImage[index]" :icon="card.icon" :ohVue="card.ohVue"/> 
     </div>
+    <h2>{{ $t('tech_solution_text') }}</h2>
     <div class="cards-technologies">
       <CardTechnologies v-for="(card, index) in cardsTechnologies" :key="index" :name="card.name" :icon="card.icon" :ohVue="card.ohVue"/>
     </div>
@@ -114,14 +115,46 @@
   const cardsTechnologies = [
     {
       name: 'Mongo',
-      ohVue: 'vi-file-type-mongo'
+      ohVue: 'si-mongodb'
+    },
+    {
+      name: 'Docker',
+      ohVue: 'la-docker'
+    },
+    {
+      name: 'React',
+      ohVue: 'ri-reactjs-line'
+    },
+    {
+      name: 'Express',
+      ohVue: 'si-express'
+    },
+    {
+      name: 'Javascript',
+      ohVue: 'si-nodedotjs'
+    },
+    {
+      name: 'Backbone',
+      ohVue: 'si-backbonedotjs'
+    },
+    {
+      name: 'Cypress',
+      ohVue: 'si-cypress'
+    },
+    {
+      name: 'Kubernetes',
+      ohVue: 'si-kubernetes'
+    },
+    {
+      name: 'Vue',
+      ohVue: 'vi-file-type-vue'
     },
   ]
-  console.log("TCL: cardsTechnologies", cardsTechnologies)
   export default {
     data() {
       return {
         cards,
+        cardsTechnologies
       }
     },
     components:{
@@ -162,23 +195,24 @@
 .cards-container{
   display: flex;
   flex-direction: row;
-  gap: 30px 20px;
+  gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 900px;
-  height: 140vh;
+  height: 160vh;
   position: relative;
 }
 .cards-technologies{
   display: flex;
   flex-direction: row;
-  gap: 30px 20px;
+  gap: 20px;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   max-width: 900px;
   position: relative;
   width: 100%;
-  height: 100vh
+  padding-bottom: 30px;
 }
 
 .about-title{

@@ -40,8 +40,8 @@
     <About ref="about"/>
     <!-- <ProjectsView/> -->
   </div>
-  <transition name="slide-left" v-if="isCvOpened">
-    <div class="right-section-container-pdf" >
+  <transition name="slide-left" >
+    <div class="right-section-container-pdf" v-if="isCvOpened" >
       <span class="close-icon-section-pdf"  @click="toggleCvFile">
         <XIcon class="close-icon-pdf" />
       </span>
@@ -70,6 +70,7 @@ header {
   position: relative;
   border-radius: 10px;
   height: 100vh;
+  overflow:hidden;
   width: v-bind(desktopWidthForHome);
 }
  

@@ -30,6 +30,7 @@
         "self_improvement_text": "Autodidata",
         "self_improvement_description": "Capacidade de planejar e estruturar a aprendizagem levando à compreensão de tópicos complexos de forma independente",
         "intrduction_description": "Desenvolvedor Web Full Stack - Bootcamp (HENRY). Experiência na integração de equipes baseadas em tecnologias de planejamento ágil (SCRUM) - Engenheiro Industrial - Universidade Antonio Nariño. Experiência como desenvolvedor web Full Stack utilizando tecnologias como Backbone, React, Redux, Vue, Vuex, desde front-end PostgreSQL, CSS, Javascript, Node.js (express), testes utilizando cypress, implantações contínuas com docker e kbernates , integrações como soluções de pagamento (Mercadolibre), análise de dados utilizando chart.js, integração de equipes, liderança e experiência na construção e implementação de aplicações do zero, gitflow para desenvolvimento de projetos, atuação em filiais com experiência em integração de informações e consolidação de tarefas",
-        "pdf_opener_text": "ABRIR CV"
+        "pdf_opener_text": "ABRIR CV",
+        "tech_solution_text": "Meu stack de tecnologias preferido"
     }
 }
