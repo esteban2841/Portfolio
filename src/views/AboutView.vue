@@ -9,8 +9,11 @@
 
       </div>
       <div class="introduction-button">
-        <button>
-          View CV
+        <button class="cv-opener" @click="toggleCvFile">
+          <p>
+            {{$t('pdf_opener_text')}}
+
+          </p>
         </button>
 
       </div>
@@ -32,7 +35,7 @@
   import kTreboles from "./../assets/cards/k-treboles.png"
   import kPicas from "./../assets/cards/k-picas.png"
   import { GlobeIcon, AcademicCapIcon } from 'heroicons-vue3/solid'
-  
+  import { mapActions } from 'vuex'
   
 
   import CardSoftSkills from './../components/about/CardSoftSkills.vue'
@@ -116,6 +119,9 @@
       GlobeIcon,
       AcademicCapIcon,
     },
+    methods:{
+      ...mapActions(['toggleCvFile'])
+    },
     computed:{
       localeUsage (){
         const multicultural = this.$t("multicultural_text")
@@ -164,12 +170,52 @@
   padding:30px;
   align-items:center;
   gap: 20px;
-  button{
-    width:115px;
-    height: 40px;
-    border-radius: 10px;
+  text-align: justify;
+}
+.cv-opener{
+  position: relative;
+  width:115px;
+  height: 40px;
+  border-radius: 10px;
+  border: solid 2px var(--primary-font-color);
+  color: var(--primary-font-color);
+  overflow: hidden;
+  z-index:8;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  p{
+    z-index: 8
   }
 }
+
+.cv-opener::before, .cv-opener::after {
+ content: "";
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ width: 0;
+ background: var(--primary-border-color);
+ transition: all 2s ease;
+}
+.cv-opener::before {
+ left: 0;
+}
+.cv-opener::after {
+ right: 0;
+}
+
+.cv-opener:hover::before {
+ width: 100%;
+}
+.cv-opener:hover::after {
+ width: 100%;
+}
+.cv-opener:hover {
+  border: none;
+}
+
+
 
 .introduction-text{
   width:80%;

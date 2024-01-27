@@ -4,18 +4,12 @@
   import { mapState, mapActions } from "vuex";
   import Home from './views/HomeView.vue';
   import About from './views/AboutView.vue';
-  import PdfEmbed from 'vue-pdf-embed';
   import {XIcon} from 'heroicons-vue3/solid'
-  import 'vue-pdf-embed/dist/style/index.css'
-
-  import 'vue-pdf-embed/dist/style/annotationLayer.css'
-  import 'vue-pdf-embed/dist/style/textLayer.css'
-
-
+  import PdfEmbed from 'vue-pdf-embed';
   export default {
     data() {
         return {
-          pdfUrl: '../public/CV_ENGLISH.pdf'
+          pdfUrl: '/CV_ENGLISH.pdf'
         }
     },
     components:{
@@ -46,12 +40,12 @@
     <About ref="about"/>
     <!-- <ProjectsView/> -->
   </div>
-  <transition name="slide-left" v-show="isCvOpened">
-    <div class="right-section-container-pdf" :class="{ open: isCvOpened }">
-      <span class="close-icon-section-pdf" v-show="!mobile" @click="toggleCvFile">
+  <transition name="slide-left" >
+    <div class="right-section-container-pdf" v-show="isCvOpened">
+      <span class="close-icon-section-pdf"  @click="toggleCvFile">
         <XIcon class="close-icon-pdf" />
       </span>
-      <pdf-embed annotation-layer text-layer :source="pdfUrl"></pdf-embed>
+      <pdf-embed :source="pdfUrl"></pdf-embed>
     </div>
   
   </transition>
@@ -71,25 +65,17 @@ header {
   overflow: hidden;
   border-radius: 10px;
   width: v-bind(desktopWidthForHome);
-  z-index:10;
 }
 .right-section-container-pdf{
   left: 282px;
-  position: absolute;
-  overflow: hidden;
+  position: relative;
   border-radius: 10px;
   width: v-bind(desktopWidthForHome);
-  z-index:9;
+  height: 100vh
 }
-/* 
-.right-section-container-pdf.open {
-  width: v-bind(desktopWidthForHome);
-  overflow: scroll;
-  overflowX: hidden;
-} */
-
+ 
 .close-icon-section-pdf{
-  position: absolute;
+  position: fixed;
   top: 0;
   right:0;
   background-color: #fff;
@@ -101,7 +87,7 @@ header {
 }
 
 .slide-left-enter-active, .slide-left-leave-active {
- transition: transform 2s linear;
+ transition: transform 0.5s linear;
 }
 .slide-left-enter-from, .slide-left-leave-to {
  transform: translateX(-100%);
