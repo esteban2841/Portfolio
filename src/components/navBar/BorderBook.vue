@@ -1,5 +1,5 @@
 <template >
-    <div class="border-container" v-show="!mobile">
+    <div class="border-container" v-show="!mobile" @click="toggleCvFile">
         
     </div>
 </template>
@@ -15,7 +15,7 @@ import { mapActions, mapState } from 'vuex'
             ...mapState(['mobile'])
         },
         methods:{
-            ...mapActions(['toggleNavBar'])
+            ...mapActions(['toggleCvFile'])
         }
     }
 </script>

@@ -41,8 +41,8 @@
         background-color: var(--primary-bg-color);
         height: 100%;
         box-sizing: border-box;
-        z-index: 2;
-        opacity: .95;
+        z-index: 11;
+        opacity: 1;
     }
 
     @media (max-width: 750px){

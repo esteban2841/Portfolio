@@ -13,6 +13,22 @@
         "skills_section_text": "Habilidades",
         "projects_section_text": "Proyectos",
         "contact_section_text": "Contacto",
-        "multicultural_text": "Multiculturalidad"
+        "multicultural_text": "Multiculturalidad",
+        "multicultural_description": "Experiente en equipos multiculturales haciendome mas empatico y competitivo en diferentes mercados.",
+        "academic_cerfication_text": "Academia y certificacion",
+        "academic_cerfication_description": "Titulo de ingenieria y certificaciones academicas brindandome multiples herramientas, resolucion de problemas y pensamiento logico",
+        "fast_learner_text": "Aprendizaje rapido y flexibilidad",
+        "fast_learner_description": "Aprendizaje rapido y disposicion para la toma de nuevos retos en nuevas tecnologias",
+        "polyglot_text": "Políglota",
+        "polyglot_description": "Orador fluente en Español, inglés y portugués",
+        "task_complection_text": "Resolucion de tareas",
+        "task_complection_description": "Orientado al logro y a la resolucion de tareas",
+        "team_work_text": "Jugador de equipo",
+        "team_work_description": "Muy buena experiencia trabajando y liderando equipos multidisciplinarios",
+        "metrics_text": "Analisis de metricas",
+        "metrics_description": "Experiencia analizando metricas e impartiendo planes de accion basadas en las mismas",
+        "self_improvement_text": "Autodidacta",
+        "self_improvement_description": "Habilidad para planear y estructurar el aprendizaje llevandome al entendimiento de temas complejos independientemente",
+        "intrduction_description": "Desarrollador web Full Stack - Bootcamp (HENRY). Experiencia integrando equipos basados ​​en tecnologías de planificación ágil (SCRUM) - Ingeniero Industrial -Universidad Antonio Nariño. Experiencia como desarrollador web Full Stack utilizando tecnologías como Backbone, React, Redux, Vue, Vuex, desde front-end PostgreSQL, CSS, Javascript, Node.js (express), pruebas usando cypress, despliegues continuos con docker y kbernates, integraciones como soluciones de pagos (Mercadolibre), análisis de datos usando chart.js, integración de equipos, liderazgo y experiencia en la construcción e implementación de aplicaciones desde cero, gitflow para desarrollo de proyectos, trabajando en ramas con experiencia en integración de información y consolidación de tareas"
     }
 }

@@ -26,9 +26,10 @@
         "team_work_text": "Team player",
         "team_work_description": "A great deal of experience working in, and leading, multidisciplinary teams",
         "metrics_text": "Metrics analisys",
-        "metrics_description": "Expertize on managing teams and helping coworkers to improve based on metrics",
+        "metrics_description": "Experience analyzing metrics and providing action plans based on them",
         "self_improvement_text": "Self improvement",
-        "self_improvement_description": "Hability to self evaluation and continuous improvement"
+        "self_improvement_description": "Hability to self evaluation and continuous improvement",
+        "intrduction_description": "Full Stack web developer - Bootcamp (HENRY). Experience integrating teams based on agile planning technologies (SCRUM) - Industrial Engineer -University Antonio Narino. Experience as Full Stack web developer using technologies such as Backbone, React, Redux, Vue, Vuex, from front-end PostgreSQL, CSS, Javascript, Node.js (express), testing using cypress and cucumber continuous deployments with docker and kbernates. Integrations such as payment solutions (Mercadolibre), analysis of data using chart.js, team integration, leadership and experience in the construction and implementation of applications from scratch, gitflow for project development, working on branches with experience in the integration of information and tasks consolidation."
 
     }
 }

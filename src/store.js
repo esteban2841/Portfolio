@@ -13,6 +13,7 @@ export const store = createStore({
             desktopWidthForHome: window.innerWidth - 280 -20 + 'px',
             activeView: "home",
             isLocaleListOpen: false,
+            isCvOpened: false,
         }
     },
     mutations: {
@@ -38,6 +39,11 @@ export const store = createStore({
         openLocaleList({state}){
             state.isLocaleListOpen = !state.isLocaleListOpen
         },
+        toggleCvFile({state}){
+			console.log("TCL: toggleCvFile -> state", state)
+            state.isCvOpened = !state.isCvOpened
+			console.log("TCL: toggleCvFile -> state2", state)
+        }
     },
     getters:{
         getLocale: (state) => {
