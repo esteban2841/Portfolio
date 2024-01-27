@@ -9,7 +9,7 @@
   export default {
     data() {
         return {
-          pdfUrl: '/CV_ENGLISH.pdf'
+          pdfUrl: '../public/CV_ENGLISH.pdf'
         }
     },
     components:{
@@ -40,12 +40,12 @@
     <About ref="about"/>
     <!-- <ProjectsView/> -->
   </div>
-  <transition name="slide-left" >
-    <div class="right-section-container-pdf" v-show="isCvOpened">
+  <transition name="slide-left" v-if="isCvOpened">
+    <div class="right-section-container-pdf" >
       <span class="close-icon-section-pdf"  @click="toggleCvFile">
         <XIcon class="close-icon-pdf" />
       </span>
-      <pdf-embed :source="pdfUrl"></pdf-embed>
+      <pdf-embed :source="pdfUrl" ></pdf-embed>
     </div>
   
   </transition>
@@ -62,7 +62,6 @@ header {
 .right-section-container{
   left: 282px;
   position: absolute;
-  overflow: hidden;
   border-radius: 10px;
   width: v-bind(desktopWidthForHome);
 }
@@ -70,14 +69,14 @@ header {
   left: 282px;
   position: relative;
   border-radius: 10px;
+  height: 100vh;
   width: v-bind(desktopWidthForHome);
-  height: 100vh
 }
  
 .close-icon-section-pdf{
   position: fixed;
   top: 0;
-  right:0;
+  right:16px;
   background-color: #fff;
   z-index: 10;
   width: 40px;
