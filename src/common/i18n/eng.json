@@ -31,6 +31,7 @@
         "self_improvement_description": "Hability to self evaluation and continuous improvement",
         "intrduction_description": "Full Stack web developer - Bootcamp (HENRY). Experience integrating teams based on agile planning technologies (SCRUM) - Industrial Engineer -University Antonio Narino. Experience as Full Stack web developer using technologies such as Backbone, React, Redux, Vue, Vuex, from front-end PostgreSQL, CSS, Javascript, Node.js (express), testing using cypress and cucumber continuous deployments with docker and kbernates. Integrations such as payment solutions (Mercadolibre), analysis of data using chart.js, team integration, leadership and experience in the construction and implementation of applications from scratch, gitflow for project development, working on branches with experience in the integration of information and tasks consolidation.",
         "pdf_opener_text": "VIEW CV",
-        "tech_solution_text": "My preferred solution stack"
+        "tech_solution_text": "My preferred solution stack",
+        "show_more": "Show more"
     }
 }

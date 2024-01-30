@@ -3,6 +3,7 @@ import {i18n} from './main';
 
 const isMobile = window.innerWidth < 750
 // Create a new store instance.
+console.log("TCL: state -> window.innerWidth - 280 -20 + 'px'", window.innerWidth - 280 -20 + 'px')
 export const store = createStore({
     state () {
         return {
@@ -10,7 +11,7 @@ export const store = createStore({
             lang:"en",
             mobile: isMobile,
             isNavOpen: isMobile ? false : true,
-            desktopWidthForHome: window.innerWidth - 280 -20 + 'px',
+            desktopWidthForHome: window.innerWidth - 280 -30 + 'px',
             activeView: "home",
             isLocaleListOpen: false,
             isCvOpened: false,

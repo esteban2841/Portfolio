@@ -22,9 +22,13 @@
     <div class="cards-container ">
         <CardSoftSkills v-for="(card, index) in cards" :key="index" :name="card.name" :name2="card.name2" :backImage="card.backgroundImage[index]" :icon="card.icon" :ohVue="card.ohVue"/> 
     </div>
-    <h2>{{ $t('tech_solution_text') }}</h2>
+    <h1 class="tech_solution_text">{{ $t('tech_solution_text') }}</h1>
     <div class="cards-technologies">
       <CardTechnologies v-for="(card, index) in cardsTechnologies" :key="index" :name="card.name" :icon="card.icon" :ohVue="card.ohVue"/>
+    </div>
+    <div class="accordion-container" :style="`--dynamic-width: ${desktopWidthForHome};`">
+      <AccordionWorkAndCertifications/>
+      
     </div>
   </div>
 </template>
@@ -39,9 +43,10 @@
   import kTreboles from "./../assets/cards/k-treboles.png"
   import kPicas from "./../assets/cards/k-picas.png"
   import { GlobeIcon, AcademicCapIcon } from 'heroicons-vue3/solid'
-  import { mapActions } from 'vuex'
+  import { mapActions, mapState } from 'vuex'
   import CardSoftSkills from './../components/about/CardSoftSkills.vue'
   import CardTechnologies from './../components/about/CardTechnologies.vue'
+  import AccordionWorkAndCertifications from './../components/about/AccordionWorkAndCertifications.vue'
 
   const cardPictures = [ asCorazones, asDiamantes, asTreboles, asPicas, kCorazones, kDiamantes, kTreboles, kPicas]
   const cardIcons = [ GlobeIcon, ]
@@ -154,27 +159,26 @@
     data() {
       return {
         cards,
-        cardsTechnologies
+        cardsTechnologies,
+        dynamicWidth: this.desktopWidthForHome
       }
     },
     components:{
       CardSoftSkills,
       GlobeIcon,
       AcademicCapIcon,
-      CardTechnologies
+      CardTechnologies,
+      AccordionWorkAndCertifications
+    },
+    computed: {
+      ...mapState(['desktopWidthForHome'])
     },
     methods:{
       ...mapActions(['toggleCvFile'])
     },
-    computed:{
-      localeUsage (){
-        const multicultural = this.$t("multicultural_text")
-        return {
-          multicultural
-        }
-      }
-    }
-
+    mounted() {
+      
+    },
   }
 </script>
 
@@ -195,12 +199,12 @@
 .cards-container{
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 130px 30px;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 900px;
-  height: 160vh;
   position: relative;
+  margin-bottom: 100px
 }
 .cards-technologies{
   display: flex;
@@ -212,7 +216,7 @@
   max-width: 900px;
   position: relative;
   width: 100%;
-  padding-bottom: 30px;
+  padding-bottom: 70px;
 }
 
 .about-title{
@@ -242,9 +246,17 @@
   display: flex;
   justify-content:center;
   align-items:center;
+  cursor: pointer;
   p{
     z-index: 8
   }
+}
+
+.tech_solution_text{
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--primary-border-color);
+  padding: 8px 0px;
+  margin: 40px 0px;
 }
 
 .cv-opener::before, .cv-opener::after {
@@ -273,10 +285,17 @@
   border: none;
 }
 
-
+.accordion-container{
+  width: var(--dynamic-width);
+  position:relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 .introduction-text{
-  width:80%;
+  width: var(--dynamic-width);
 }
 .introduction-button{
   width:20%;

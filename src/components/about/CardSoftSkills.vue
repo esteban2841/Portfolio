@@ -44,7 +44,6 @@ export default {
         text-align: center;
         transition: transform 0.8s;
         transform-style: preserve-3d;
-        margin: 50px 0px;
         width: 200px;
         height: 300px;
         border-radius: 100px;

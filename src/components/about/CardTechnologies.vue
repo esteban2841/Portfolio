@@ -1,7 +1,9 @@
 <template >
-    <div class="tech-card">
-        <component v-show="!!icon" :is="icon" class="icon-tech"></component>
+    <div class="tech-card" @mouseover="showTooltip = true" @mouseout="showTooltip = false">
         <v-icon v-show="ohVue" scale="1.5" fill="white" :class="name" :name="ohVue" class="icon-tech"></v-icon>
+        <div class="tooltip" v-if="showTooltip">
+            <p>{{ name }}</p>
+        </div>
     </div>
 </template>
 <script lang="ts">
@@ -11,11 +13,10 @@ export default {
     data() {
         
         return {
-            
+            showTooltip: false
         }
     },
     mounted(){
-        console.log("TCL: ohVue", this.props)
     },
     
 }
@@ -30,11 +31,22 @@ export default {
         justify-content:center;
         align-items:center;
         border-radius: 20px;
-        overflow: hidden;
     }
 
     .tech-card:hover{
         background-color: var(--secondary-bg-color)
+    }
+
+    .tooltip{
+        z-index: 6;
+        width: 80px;
+        position:absolute;
+        bottom: -60px;
+        background-color: var(--secondary-bg-color);
+        border-radius: 10px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
     }
 
     .Mongo:hover{
@@ -55,10 +67,10 @@ export default {
     .Vue{
         fill: #fff
     }
-    .Cypress{
+    .Cypress:hover{
         fill: #545a3e
     }
-    .Kubernetes{
+    .Kubernetes:hover{
         fill: #326de6
     }
 
