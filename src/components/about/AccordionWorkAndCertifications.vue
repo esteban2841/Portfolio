@@ -101,7 +101,7 @@
     export default {
         data() {
             return{
-
+                cardsExperience
             }
         },
         components:{
