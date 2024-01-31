@@ -25,11 +25,11 @@
             ...mapActions(['toggleNavBar'])
         },
         components:{
-    SocialNetworks,
-    PhotoSection,
-    BorderBook,
-    SectionTags
-}
+            SocialNetworks,
+            PhotoSection,
+            BorderBook,
+            SectionTags
+        }
     }
 </script>
 <style scoped>
