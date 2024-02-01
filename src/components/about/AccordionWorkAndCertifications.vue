@@ -1,30 +1,38 @@
 <template >
     <div class="right-text-show-more-accordion">
-        <h2>{{ $t('show_more')+ '...' }}</h2>
-        <div class="vertical-timeline-container">
+        <div class="show-more-container" v-if="!showMore" @click="toggleShowMore">
+            <h2>{{ $t('show_more')+ ' ' + $t('about_me_section') + '...' }}</h2>
+            <v-icon scale="1.5" fill="white" :name="'md-keyboarddoublearrowdown-twotone'" class="icon-show-more"></v-icon>
+        </div>
+        <div class="show-less-container" v-if="showMore" @click="toggleShowMore">
+            <h2>{{ $t('show_less')+ ' ' + $t('about_me_section') + '...' }}</h2>
+            <v-icon scale="1.5" fill="white" :name="'md-keyboarddoublearrowup-twotone'" class="icon-show-more"></v-icon>
+        </div>
+        <div class="vertical-timeline-container" v-if="showMore">
             <div class="left-section">
                 <h1>{{$t('experience_text')}}</h1>
-                <ExperienceOrCertificationTimeLine v-for="(card, index) in cardsExperience" 
-                    :charge_title="card.charge_title" 
-                    :modality_type="card.modality_type" 
-                    :company_name="card.company_name" 
-                    :location="card.location" 
-                    :goals_functions="card.goals_functions" 
-                    :start_date="card.start_date" 
-                    :end_date="card.end_date" 
-                    :key="index"
+                
+                <ExperienceOrCertificationTimeLine class="timeline-item" 
+                    :cards="cardsExperience" 
+
                 />
             </div>
             <div class="right-section">
                 
                 <h1>{{$t('certification_text')}}</h1>
+                <EducationTimeLine class="timeline-item" 
+                    :cards="cardsEducation" 
+    
+                />
             </div>
         </div>
     </div>
 </template>
 <script lang="ts">
     import ExperienceOrCertificationTimeLine from './ExperienceOrCertificationTimeLine.vue';
-
+    import EducationTimeLine from './EducationTimeLine.vue';
+    import { mapActions, mapState } from 'vuex';
+    
     const cardsExperience = [
         {
             charge_title : ('experience_card_job1_charge_title_text'),
@@ -34,7 +42,7 @@
             goals_functions: ('experience_card_job1_goals_title_text'),
             start_date: "06-2022",
             end_date: '10-2023',
-            
+            key: "bewe",
         },
         {
             charge_title : ('experience_card_job2_charge_title_text'),
@@ -44,6 +52,7 @@
             goals_functions: ('experience_card_job2_goals_title_text'),
             start_date: "01-2023",
             end_date: '02-2023',
+            key: "OnlineNature",
             
         },
         {
@@ -54,6 +63,7 @@
             goals_functions: ('experience_card_job3_goals_title_text'),
             start_date: "04-2023",
             end_date: '05-2023',
+            key: "sevenDevs",
             
         },
         {
@@ -64,6 +74,7 @@
             goals_functions: ('experience_card_job4_goals_title_text'),
             start_date: "03-2023",
             end_date: '05-2023',
+            key: "henry",
             
         },
         {
@@ -74,6 +85,7 @@
             goals_functions: ('experience_card_job5_goals_title_text'),
             start_date: "11-2021",
             end_date: '04-2022',
+            key: "pokemonsInfo",
             
         },
         {
@@ -84,6 +96,7 @@
             goals_functions: ('experience_card_job6_goals_title_text'),
             start_date: "10-2021",
             end_date: '03-2022',
+            key: "kbx",
             
         },
         {
@@ -94,22 +107,57 @@
             goals_functions: ('experience_card_job7_goals_title_text'),
             start_date: "01-2019",
             end_date: '09-2021',
+            key: "concentrix",
             
         },
     ]
-
+    const cardsEducation = [
+        {
+            charge_title : ('education_card_job1_charge_title_text'),
+            modality_type: ('education_card_job1_modality_title_text'),
+            company_name: ('education_card_job1_company_title_text'),
+            location: ('education_card_job1_location_title_text'),
+            goals_functions: ('education_card_job1_goals_title_text'),
+            start_date: "01-2022",
+            end_date: '05-2022',
+            key: "Henry",
+            theme: "dark",
+        },
+        {
+            charge_title : ('education_card_job2_charge_title_text'),
+            modality_type: ('education_card_job2_modality_title_text'),
+            company_name: ('education_card_job2_company_title_text'),
+            location: ('education_card_job2_location_title_text'),
+            goals_functions: ('education_card_job2_goals_title_text'),
+            start_date: "01-2013",
+            end_date: '12-2017',
+            key: "Universidad Antonio Nariño",
+            theme: "dark",
+            
+        },
+       
+    ]
+    
     export default {
         data() {
             return{
-                cardsExperience
+                cardsExperience,
+                cardsRefs: [],
+                cardsEducation,
             }
+        },
+        computed: {
+            ...mapState(['showMore'])
+        },
+        methods:{
+            ...mapActions(['toggleShowMore'])
         },
         components:{
             ExperienceOrCertificationTimeLine,
+            EducationTimeLine,
         },
-        mounted(){
-
-        }
+        mounted() {
+        },
     }
 </script>
 <style scoped>
@@ -120,6 +168,25 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
+    }
+
+    .show-more-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+    .icon-show-more{
+        display: flex;
+        width: 70px;
+        height: 70px;
+        fill: #ff9100;
+    }
+
+    .show-less-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .vertical-timeline-container{
@@ -140,20 +207,7 @@
         padding: 10px;
     }
 
+    
 
-
-    @keyframes bounce-in {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    60% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);    
-    }
-}
-
+    
 </style>

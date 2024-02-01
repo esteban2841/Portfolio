@@ -15,6 +15,7 @@ export const store = createStore({
             activeView: "home",
             isLocaleListOpen: false,
             isCvOpened: false,
+            showMore: false,
         }
     },
     mutations: {
@@ -41,8 +42,11 @@ export const store = createStore({
             state.isLocaleListOpen = !state.isLocaleListOpen
         },
         toggleCvFile({state}){
-			console.log("TCL: toggleCvFile -> state", state)
             state.isCvOpened = !state.isCvOpened
+        },
+        toggleShowMore({state}){
+			console.log("TCL: toggleCvFile -> state", state)
+            state.showMore = !state.showMore
 			console.log("TCL: toggleCvFile -> state2", state)
         }
     },

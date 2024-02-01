@@ -1,13 +1,39 @@
-<template lang="">
-    <div>
-        
+<template >
+    <div class="contact-view-container">
+        <h1>{{ $t('contact_section_text') }}</h1>
+        <ContactForm/>
     </div>
 </template>
-<script>
-export default {
-    
-}
+<script lang="ts">
+    import ContactForm from '../components/contact/ContactForm.vue'
+    export default {
+        data() {
+            return {
+                
+            }
+        },
+        components:{
+            ContactForm
+        },
+    }
 </script>
-<style lang="">
-    
+<style >
+    .contact-view-container{
+        width: 100%;
+        box-sizing: border-box;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        color: var(--primary-font-color);
+        position: relative;
+        background-color: var(--primary-bg-color);
+        h1{
+            text-transform: uppercase;
+            border-bottom: 4px solid var(--primary-border-color);
+            padding-bottom: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
 </style>

@@ -72,6 +72,19 @@
         "experience_card_job7_modality_title_text": "Remote",
         "experience_card_job7_company_title_text": "Concentrix",
         "experience_card_job7_location_title_text": "Bogotá, Colombia",
-        "experience_card_job7_goals_title_text": "Promoted to this position from a bilingual assistant position to help a team leader develop and train a team of 15 people to increase performance as agents by teaching them good behaviors within calls and working on soft skills to have a better approach with them and meet standards . quality, taking The supervisor calls and contributes with delay reports and other administrative tasks. Promoted to this position to work together with the quality area developing action plans for improvement in group indicators, assisting my team leader with coaching and actively participating to provide support in these coaching processes, taking supervisor calls and assisting with complicated calls for the American EPS United Health care."        
+        "experience_card_job7_goals_title_text": "Promoted to this position from a bilingual assistant position to help a team leader develop and train a team of 15 people to increase performance as agents by teaching them good behaviors within calls and working on soft skills to have a better approach with them and meet standards . quality, taking The supervisor calls and contributes with delay reports and other administrative tasks. Promoted to this position to work together with the quality area developing action plans for improvement in group indicators, assisting my team leader with coaching and actively participating to provide support in these coaching processes, taking supervisor calls and assisting with complicated calls for the American EPS United Health care.",
+        "education_card_job1_charge_title_text": "Full stack web developer",
+        "education_card_job1_modality_title_text": "Henry",
+        "education_card_job1_company_title_text": "Henry",
+        "education_card_job1_location_title_text": "Colombia",
+        "education_card_job1_goals_title_text": "Theoretical and practical bootcamp of 800+ hours focused on JavaScript ES+6, React, Redux, Express, Sequelize, Node, PostgreSQL and RESTful API. Ending with the development of various 'real' projects under agile methodologies",
+        "education_card_job2_charge_title_text": "Full stack Developer",
+        "education_card_job2_modality_title_text": "Universidad Antonio Nariño",
+        "education_card_job2_company_title_text": "Universidad Antonio Nariño",
+        "education_card_job2_location_title_text": "Colombia",
+        "education_card_job2_goals_title_text": "Graduated from Universidad Antonio Nariño in the Industrial Engineering degree since 2017",
+        "show_less": "Show less",
+        "about_me_section": "about me",
+        "send_message": "Send message"
     }
 }

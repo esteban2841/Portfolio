@@ -1,12 +1,12 @@
 <template >
-    <div class="timeline-container" v-for="(card, index) in cards" 
+    <div class="timeline-container-education" v-for="(card, index) in cards" 
         :id="card.key" 
         :ref="card.key"
     >
-        <div class="icon-timeline">
+        <div class="icon-timeline-education">
             
         </div>
-        <div class="experience-card-container">
+        <div class="experience-card-container-education">
             <div class="charge_title-container">
 
                 <h4 class="charge_title">{{ $t(card.charge_title) }}</h4>
@@ -80,18 +80,18 @@
 </script>
 <style >
 
-    .timeline-container{
+    .timeline-container-education{
         width: 100%;
         display: flex;
         flex-direction: column;
         position: relative;
-        border-left: 10px solid var(--primary-font-color);
+        border-left: 10px solid var(--terciary-bg-color);
         margin-left: 30px;
         padding-left: 20px;
     }
 
-    .icon-timeline{
-        background-color: var(--primary-border-color);
+    .icon-timeline-education{
+        background-color: var(--primary-font-color);
         height: 10px;
         width: 50px;
         height: 50px;
@@ -99,27 +99,28 @@
         position: relative;
         left: -60px;
         top:-5px;
-        border: 10px solid var(--primary-font-color);
+        border: 10px solid var(--terciary-bg-color);
     }
 
-    .experience-card-container{
+    .experience-card-container-education{
         position: relative;
         padding: 14px;
         margin-bottom: 30px;
         border-radius: 10px;
-        background-color: var(--terciary-bg-color);
+        background-color: var(--primary-border-color);
         box-shadow: var(--first-shadow);
+        color:var(--terciary-bg-color);
         width: 65%;
         top: -60px;
         left: 30px;
     }
     
-    .experience-card-container::before{
+    .experience-card-container-education::before{
         position: absolute;
         content: "";
         width: 0;
         height: 0;
-        border-top: 20px solid var(--terciary-bg-color);
+        border-top: 20px solid var(--primary-border-color);
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         box-shadow: var(--first-shadow);
@@ -141,7 +142,7 @@
             transform: scale(1);    
         }
     }
-    .timeline-container{
+    .timeline-container-education{
         animation: bounce-in 1s;
     }
 </style>

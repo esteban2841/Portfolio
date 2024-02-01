@@ -1,6 +1,6 @@
 <template>
   <div class="about-container">
-    <h1 class="about-title">{{ $t('about_section_text') }}</h1>
+    <h1 class="about-title">{{ $t('about_me_section')  }}</h1>
     <div class="about-introduction">
       <div class="introduction-text">
         <h4>

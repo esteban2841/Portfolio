@@ -6,6 +6,9 @@
   import About from './views/AboutView.vue';
   import {XIcon} from 'heroicons-vue3/solid'
   import PdfEmbed from 'vue-pdf-embed';
+  import SkillsView from './views/SkillsView.vue';
+  import ProjectsView from './views/ProjectsView.vue';
+  import ContactView from './views/ContactView.vue';
   export default {
     data() {
         return {
@@ -17,6 +20,9 @@
       Home,
       About,
       PdfEmbed,
+      SkillsView,
+      ProjectsView,
+      ContactView,
       XIcon
     },
     computed:{
@@ -38,6 +44,10 @@
   <div class="right-section-container" v-show="!isCvOpened">
     <Home ref="home"/>
     <About ref="about"/>
+    <SkillsView ref="skills" />
+    <ProjectsView ref="projects" />
+    <ContactView ref="contact" />
+    
     <!-- <ProjectsView/> -->
   </div>
   <transition name="slide-left" >
