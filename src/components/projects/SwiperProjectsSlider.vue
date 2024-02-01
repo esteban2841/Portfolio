@@ -98,7 +98,7 @@
         },
         data() {
             return {
-                modules: [Navigation, Pagination, Scrollbar, A11y],
+                modules: [Navigation, Pagination, A11y],
                 projectCards,
                 projectImages
             };

@@ -74,6 +74,7 @@ header {
   position: absolute;
   border-radius: 10px;
   width: v-bind(desktopWidthForHome);
+  overflow:hidden;
 }
 .right-section-container-pdf{
   left: 282px;

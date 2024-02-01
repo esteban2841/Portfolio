@@ -1,21 +1,21 @@
 <template >
-    <form @submit.prevent="handleSubmit" class="contact-form-container">
+    <form ref="emailForm" @submit.prevent="handleSubmit" class="contact-form-container">
         <div class="name-container">
-            <input placeholder="Name:" v-model="name" type="text" />
+            <input required placeholder="Name:" v-model="user_name" :name="user_name" type="text" />
         </div>
         <div class="email-subject-container">
             <div class="email">
-                <input placeholder="Email:" v-model="email" type="text" />
+                <input required placeholder="Email:" v-model="user_email" :name="user_email" type="text" />
 
             </div>
             <div class="subject">
-                <input placeholder="Subject:" v-model="subject" type="text" />
+                <input required placeholder="Subject:" v-model="subject" :name="subject" type="text" />
                 
             </div>
             
         </div>
         <div class="message-container">
-            <input placeholder="Message:" v-model="message" type="text" />
+            <input required placeholder="Message:" v-model="message" :name="message" type="text" />
 
         </div>
         <div class="button-container">
@@ -29,31 +29,46 @@
     </form>
 </template>
 <script lang="ts">
-export default {
-    data() {
-        return {
-            name : '',
-            email : '',
-            subject : '',
-            message : '',
-        }
-    },
-    methods:{
-        handleSubmit(event){
-			console.log("TCL: handleSubmit -> event", event)
-            const data = {
-                name: this.name,
-                email: this.email,
-                subject: this.subject,
-                message: this.message,
-                
+    import emailjs from 'emailjs-com';
+    export default {
+        data() {
+            return {
+                user_name : '',
+                user_email : '',
+                subject  : '',
+                message : '',
             }
-            this.name = ""
-            console.log("TCL: handleSubmit -> data", data)
+        },
+        methods:{
+            handleSubmit(event){
+                // const data = this.$refs.emailForm
+                const data = {
+                    user_name: this.user_name,
+                    email: this.email,
+                    contact_number  : Math.random() * 50000 ,
+                    message: this.message,
+                    subject: this.subject
+                    
+                }
+                console.log("TCL: handleSubmit -> data", data)
+                this.sendEmail(data)
+            },
+            sendEmail(data){
+                emailjs.init('CXKBkq93CSW21c2gl')
+                emailjs.send('service_iydl0s7', 'contact_form', data, )
+                    .then((result) => {
+                        console.log('SUCCESS!', result.text, result);
+                    }, (error) => {
+                        console.log('FAILED...', error.text, error);
+                });
+                this.user_name = ""
+                this.user_email = ""
+                this.subject = ""
+                this.message = ""
+            }
         }
+        
     }
-    
-}
 </script>
 <style >
     .contact-form-container{
