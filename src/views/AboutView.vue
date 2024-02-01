@@ -26,7 +26,7 @@
     <div class="cards-technologies">
       <CardTechnologies v-for="(card, index) in cardsTechnologies" :key="index" :name="card.name" :icon="card.icon" :ohVue="card.ohVue"/>
     </div>
-    <div class="accordion-container" :style="`--dynamic-width: ${desktopWidthForHome};`">
+    <div class="accordion-container" :style="`--dynamic-width: ${mobile ? '100%' : desktopWidthForHome};`">
       <AccordionWorkAndCertifications/>
       
     </div>
@@ -160,7 +160,7 @@
       return {
         cards,
         cardsTechnologies,
-        dynamicWidth: this.desktopWidthForHome
+        dynamicWidth: this.mobile ? '100%' : this.desktopWidthForHome
       }
     },
     components:{
@@ -171,7 +171,7 @@
       AccordionWorkAndCertifications
     },
     computed: {
-      ...mapState(['desktopWidthForHome'])
+      ...mapState(['desktopWidthForHome', 'mobile'])
     },
     methods:{
       ...mapActions(['toggleCvFile'])
@@ -187,22 +187,21 @@
 .about-container{
   color: var(--primary-font-color);
   position: relative;
-  min-width: 700px;
   width: 100%;
   background-color: var(--primary-bg-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  max-width: 900px;
 
 }
 .cards-container{
   display: flex;
   flex-direction: row;
-  gap: 130px 30px;
+  gap: 30px 30px;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 900px;
   position: relative;
   margin-bottom: 100px
 }
@@ -213,7 +212,6 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 900px;
   position: relative;
   width: 100%;
   padding-bottom: 70px;
@@ -257,6 +255,7 @@
   border-bottom: 2px solid var(--primary-border-color);
   padding: 8px 0px;
   margin: 40px 0px;
+  text-align:center;
 }
 
 .cv-opener::before, .cv-opener::after {
@@ -292,6 +291,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  max-width: 1000px;
 }
 
 .introduction-text{
@@ -301,6 +301,50 @@
   width:20%;
 }
 
-@media (min-width: 1024px) {
+@media only screen and (max-width: 1000px) and (min-width: 750px) {
+  .introduction-button{
+    width:30%;
+  }
+  .cv-opener{
+    width: 115px;
+    height: 115px;
+  }
+  
 }
+
+@media (max-width: 750px){
+  .cards-container{
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .about-introduction{
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  .introduction-text{
+    width: 100% !important;
+  }
+  .tech_solution_text{
+    padding: 20px 30px;
+    margin: 30px 30px;
+  }
+  .cards-technologies{
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .introduction-button{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+  }
+  .cv-opener{
+    width: 100%;
+    height: 115px;
+  }
+}
+
 </style>

@@ -54,7 +54,7 @@
 <style >
     .section-container{
         width: 100%;
-        color: #fff;
+        color: var(--primary-font-color);
         padding: 5px 10px;
         margin-top: 20px;
         gap: 10px;
@@ -88,6 +88,6 @@
     .section-icon{
         width: 24px;
         height: 24px;
-        fill: #fff;
+        fill: var(--primary-font-color);
     }
 </style>

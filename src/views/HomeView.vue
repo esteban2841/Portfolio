@@ -24,7 +24,7 @@
       }
     },
     computed:{
-      ...mapState(['isNavOpen', 'mobile', 'desktopWidthForHome'])
+      ...mapState(['isAppThemeDark','isNavOpen', 'mobile', 'desktopWidthForHome'])
     },
     components: {
       MenuIcon,
@@ -44,11 +44,8 @@
 </script>
 
 <template>
-  <section class="home-section" :class="[{ isNavOpen, mobile }, isNavOpen && mobile && 'views-container navOpenedMobile' 
-  || isNavOpen && !mobile && 'views-container NavOpenedDesktop'
-  || !isNavOpen && mobile && 'views-container NavClosedMobile'
-  ]">
-    <MenuIcon class="menu-icon" @click="toggleNavBar" v-show="!isNavOpen"/>
+  <section class="home-section">
+    <MenuIcon class="menu-icon" @click="toggleNavBar" v-show="!isNavOpen&&mobile"/>
     <div class="title-container">
       <h1 class="first-line">Esteban</h1>
       <h1 class="second-line">Puentes</h1>
@@ -62,7 +59,7 @@
       </button>
     </div>
 
-    <ParticlesImplemented/>
+    <ParticlesImplemented :theme="isAppThemeDark"/>
   </section>
 </template>
 <style>
@@ -87,7 +84,7 @@
     line-height: 0px;
     left: 0;
     z-index: 2;
-    color: #fff;
+    color: var(--primary-font-color);
     font-family: 'Philosopher', sans-serif;
     h1{
       font-size: 60px;
@@ -122,27 +119,30 @@
     cursor: pointer;
   }
 
-  .navOpenedMobile{
-    top: 100vh;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-  }
-  .NavClosedMobile{
-    top: 0;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-  }
-  .navOpenedDesktop{
-    top: 0;
-    height: 100vh;
-    left: 280px;
-  }
   .menu-icon{
     width: 40px;
-    fill: #fff !important;
+    fill: var(--primary-font-color) !important;
     z-index: 5;
-    position: relative;
+    position: absolute;
+    top: 5px;
+    left: 5px;
   }
+
+  
+@media (max-width: 750px){
+  .home-section{
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .professions-title{
+    display:flex;
+    flex-direction: column;
+  }
+}
   </style>

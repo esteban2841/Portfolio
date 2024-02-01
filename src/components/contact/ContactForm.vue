@@ -72,8 +72,8 @@
 </script>
 <style >
     .contact-form-container{
-        width: 650px;
         height: 500px;
+        width: 600px;
         background-color: transparent;
         margin: 10px;
         display:flex;
@@ -184,4 +184,16 @@
         color: var(--primary-font-color);
         border-radius: 10px;
     }
-</style>
+    @media only screen and (max-width: 1000px) and (min-width: 750px) {
+        .contact-form-container{
+            width: 450px;
+
+        }
+    }   
+    @media (max-width: 750px) {
+        .contact-form-container{
+            width: 90%;
+
+        }
+    }   
+    </style>

@@ -75,8 +75,23 @@ export default {
     }
 
     .icon-tech{
-        fill: white;
+        fill: var(--primary-font-color);
         width: 150px;
         height: 150px;
     }
+
+        
+    @media (max-width: 750px){
+        .tech-card{
+            width: 100px;
+            height: 100px;
+            
+        }
+        .icon-tech{
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+
 </style>

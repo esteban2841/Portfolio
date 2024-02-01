@@ -11,11 +11,12 @@ export const store = createStore({
             lang:"en",
             mobile: isMobile,
             isNavOpen: isMobile ? false : true,
-            desktopWidthForHome: window.innerWidth - 280 -30 + 'px',
+            desktopWidthForHome: window.innerWidth - 300 + 'px',
             activeView: "home",
             isLocaleListOpen: false,
             isCvOpened: false,
             showMore: false,
+            isAppThemeDark: true,
         }
     },
     mutations: {
@@ -48,7 +49,30 @@ export const store = createStore({
 			console.log("TCL: toggleCvFile -> state", state)
             state.showMore = !state.showMore
 			console.log("TCL: toggleCvFile -> state2", state)
-        }
+        },
+        toggleTheme({state}){
+            console.log("TCL: toggleCvFile -> state", state)
+            state.isAppThemeDark = !state.isAppThemeDark
+            console.log("TCL: toggleCvFile -> state2", state)
+            if(state.isAppThemeDark){
+                document.documentElement.style.setProperty('--primary-bg-color', '#212121')
+                document.documentElement.style.setProperty('--primary-font-color', '#fff')
+                document.documentElement.style.setProperty('--transparent-bg-color', 'transparent')
+                document.documentElement.style.setProperty('--secondary-bg-color',  '#3C4043')
+                document.documentElement.style.setProperty('--terciary-bg-color',  'rgb(48, 48, 48)')
+                document.documentElement.style.setProperty('--primary-border-color',  ' #6573C3')
+                
+            }else{
+                document.documentElement.style.setProperty('--primary-bg-color', '#f5f5f5')
+                document.documentElement.style.setProperty('--primary-font-color', '#6573C3')
+                document.documentElement.style.setProperty('--transparent-bg-color', 'rgb(48, 48, 48)')
+                document.documentElement.style.setProperty('--secondary-bg-color', '#212121')
+                document.documentElement.style.setProperty('--terciary-bg-color',  '#fff')
+                document.documentElement.style.setProperty('--primary-border-color',  'rgb(48, 48, 48)')
+
+            }
+
+        },
     },
     getters:{
         getLocale: (state) => {

@@ -27,7 +27,7 @@ import { mapActions, mapState } from 'vuex'
         left: 260px;
         width: 20px;
         background-color: var(--secondary-bg-color);
-        border: solid 1px #6573C3;
+        border: solid 1px var(--primary-border-color);
         border-radius: 0px 220px 220px 0px;
     }
 </style>

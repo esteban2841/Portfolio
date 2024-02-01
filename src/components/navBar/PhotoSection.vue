@@ -10,7 +10,7 @@
                 <img :src="photo" alt="photo"/>
             </div>
             <div class="change-settings-container">
-                <div class="theme-settings-container">
+                <div class="theme-settings-container" @click="changeColors">
                         <SunIcon class="sun-icon"/>
                 </div>
                 <div class="locale-settings-container">
@@ -51,13 +51,16 @@
             ...mapGetters(['getLocale'])
         },
         methods:{
-            ...mapActions(['toggleNavBar', 'openLocaleList', 'setLocaleLang']),
+            ...mapActions(['toggleNavBar', 'toggleTheme', 'openLocaleList', 'setLocaleLang']),
             changeLocale(locale) {
 				console.log("TCL: changeLocale -> locale", locale)
                 this.$i18n.locale = locale
                 this.setLocaleLang(locale)
                 this.openLocaleList()
 
+            },
+            changeColors(){
+				this.toggleTheme()
             }
         },
         components: {
@@ -146,7 +149,7 @@
         border-radius: 50%;
     }
     .translate{
-        fill: white;
+        fill: var(--primary-font-color);
         width: 30px;
         height: 30px;
     }

@@ -56,4 +56,20 @@ export default {
     .skills-habilities:hover {
         transform: rotateY(360deg);
     }
+    @media only screen and (max-width: 1000px) and (min-width: 750px) {
+        
+        .skills-habilities{
+            svg{
+                width:100%;
+            }
+        }
+    }
+    @media (max-width: 750px) {
+        
+        .skills-habilities{
+            svg{
+                width:100%;
+            }
+        }
+    }
 </style>

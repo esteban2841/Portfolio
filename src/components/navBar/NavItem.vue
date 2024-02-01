@@ -49,6 +49,7 @@
         .navBar{
             width:100%;
             position: relative;
+            height: 100vh;
         }
     }
 

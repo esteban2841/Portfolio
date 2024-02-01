@@ -212,4 +212,12 @@
     .description-container-project{
         width:100%
     }
+
+    @media (max-width: 750px){
+  
+        .swiper-container{
+            width: 90%;
+        }
+    }
+
 </style>

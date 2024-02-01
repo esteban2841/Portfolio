@@ -48,14 +48,13 @@
     <ProjectsView ref="projects" />
     <ContactView ref="contact" />
     
-    <!-- <ProjectsView/> -->
   </div>
   <transition name="slide-left" >
     <div class="right-section-container-pdf" v-if="isCvOpened" >
       <span class="close-icon-section-pdf"  @click="toggleCvFile">
         <XIcon class="close-icon-pdf" />
       </span>
-      <pdf-embed :source="pdfUrl" ></pdf-embed>
+      <pdf-embed class="pdf-container" :source="pdfUrl" ></pdf-embed>
     </div>
   
   </transition>
@@ -74,7 +73,13 @@ header {
   position: absolute;
   border-radius: 10px;
   width: v-bind(desktopWidthForHome);
+  background-color: var(--primary-bg-color);
   overflow:hidden;
+  max-width: 1000px;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
 }
 .right-section-container-pdf{
   left: 282px;
@@ -82,18 +87,18 @@ header {
   border-radius: 10px;
   height: 100vh;
   overflow:hidden;
-  width: v-bind(desktopWidthForHome);
+  width: v-bind(mobile ? '100%' : desktopWidthForHome);
 }
  
 .close-icon-section-pdf{
   position: fixed;
   top: 0;
   right:16px;
-  background-color: #fff;
+  background-color: var(--primary-font-color);
   z-index: 10;
   width: 40px;
   height: 40px;
-  border: solid 2px black;
+  border: solid 2px var(--primary-bg-color);
   border-radius: 5px
 }
 
@@ -109,7 +114,7 @@ header {
 
 .close-icon-pdf{
   position:absolute;
-  fill: black;
+  fill: var(--primary-bg-color);
   width: 40px;
   height: 40px;
   z-index: 10;
@@ -117,6 +122,18 @@ header {
 
 @media (max-width: 750px){
   header{
+    width: 100%;
+  }
+  .right-section-container{
+    left: 0;
+    width: 100%;
+    top: v-bind(isNavOpen && '100vh')
+  }
+  .right-section-container-pdf{
+    width: 100%;
+    left:0;
+  }
+  .vue-pdf-embed{
     width: 100%;
   }
 }

@@ -8,7 +8,7 @@
             :options="{
                 background: {
                     color: {
-                        value: '#212121'
+                        value:  '#f5f5f5'
                     }
                 },
                 fpsLimit: 120,
@@ -41,10 +41,10 @@
                 },
                 particles: {
                     color: {
-                        value: '#f5f5f5' 
+                        value: '#212121' 
                     },
                     links: {
-                        color: '#f5f5f5',
+                        color: '#212121',
                         distance: 150,
                         enable: true,
                         opacity: 0.5,

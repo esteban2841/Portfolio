@@ -32,8 +32,9 @@ export default {
     .flip-card {
         background-color: transparent;
         width: 200px;
-        height: 200px;
+        height: 300px;
         perspective: 1000px;
+        box-sizing:border-box;
         
     }
     
@@ -44,9 +45,10 @@ export default {
         text-align: center;
         transition: transform 0.8s;
         transform-style: preserve-3d;
-        width: 200px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
         border-radius: 100px;
+        box-sizing:border-box;
     }
 
     .flip-card:hover .flip-card-inner {
@@ -72,13 +74,13 @@ export default {
     }
     
     .flip-card-front {
-        background-color: #bbb;
-        color: #fff;
+        background-color: var(--primary-font-color);
+        color: var(--primary-bg-color);
         p{
             transform: rotate(180deg);
         }
-        width: 200px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
         transform: rotate(135deg);
     }
     .ohvue{
@@ -91,8 +93,8 @@ export default {
     }
     
     .flip-card-back {
-        background-color: #fff;
-        color: white;
+        background-color: var(--primary-font-color);
+        color: var(--primary-bg-color);
         top: 0;
         width: 100%;
         height: 100%;
@@ -130,4 +132,29 @@ export default {
     .right{
         background-color: var(--right-card-bg-color);
     }
+
+    @media (max-width: 750px){
+        .flip-card {
+            background-color: transparent;
+            width: 150px;
+            height: 250px;
+            perspective: 1000px;
+            
+        }
+        .flip-card-front {
+            img{
+                width: 150px;
+                height: 250px;
+            }
+            
+        }
+        .flip-card-back {
+            font-size: 14px !important;
+            h1{
+                font-size: 17px !important;
+                
+            }
+        }
+    }
+
 </style>

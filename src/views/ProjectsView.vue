@@ -26,6 +26,9 @@
         align-items: center;
         position: relative;
         background-color: var(--primary-bg-color);
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1000px;
         h1{
             text-transform: uppercase;
             border-bottom: 2px solid var(--primary-border-color);

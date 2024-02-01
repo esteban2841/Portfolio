@@ -168,13 +168,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
+        box-sizing: border-box;
     }
 
     .show-more-container{
         display: flex;
         flex-direction: row;
         align-items: center;
-
+        justify-content: flex-end;
     }
     .icon-show-more{
         display: flex;
@@ -206,8 +207,28 @@
         width: 50%;
         padding: 10px;
     }
-
     
+    @media (max-width: 750px){
+        
+        .vertical-timeline-container{
+            
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+        }
+        .left-section{
+            width: 90%;
+            padding: 10px;
+        }
+        .right-section{
+            width: 90%;
+            padding: 10px;
+        }
+    }
 
-    
+
+
 </style>
