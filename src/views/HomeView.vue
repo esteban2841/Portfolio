@@ -59,7 +59,7 @@
       </button>
     </div>
 
-    <ParticlesImplemented :theme="isAppThemeDark"/>
+    <ParticlesImplemented/>
   </section>
 </template>
 <style>
@@ -73,6 +73,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--primary-bg-color) !important;
   }
   .title-container{
     display: flex;

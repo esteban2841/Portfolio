@@ -54,7 +54,8 @@ export default {
         }
     }
     .skills-habilities:hover {
-        transform: rotateY(360deg);
+        background-color: var(--primary-font-color);
+        border-radius: 20px;
     }
     @media only screen and (max-width: 1000px) and (min-width: 750px) {
         

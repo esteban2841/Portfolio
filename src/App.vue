@@ -73,7 +73,6 @@ header {
   position: absolute;
   border-radius: 10px;
   width: v-bind(desktopWidthForHome);
-  background-color: var(--primary-bg-color);
   overflow:hidden;
   max-width: 1000px;
   display:flex;
@@ -86,7 +85,6 @@ header {
   position: relative;
   border-radius: 10px;
   height: 100vh;
-  overflow:hidden;
   width: v-bind(mobile ? '100%' : desktopWidthForHome);
 }
  

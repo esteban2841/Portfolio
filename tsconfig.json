@@ -1,5 +1,7 @@
 {
-  "compilerOptions": {"allowJs": true,},
+  "compilerOptions": {
+    "allowJs": true,
+  },
   "files": [],
   "references": [
     {
