@@ -82,9 +82,6 @@ export default {
         height: 100%;
         transform: rotate(135deg);
     }
-    .title-name-skill{
-        transform: rotate(180deg);
-    }
     .ohvue{
         position: absolute;
         width: 130px;

@@ -26,13 +26,14 @@
       XIcon
     },
     computed:{
-      ...mapState(['isNavOpen','desktopWidthForHome', 'isCvOpened', 'mobile'])
+      ...mapState(['isNavOpen','desktopWidthForHome', 'isCvOpened', 'mobile', 'centerContainer'])
     },
     methods: {
       ...mapActions(['toggleCvFile'])
     },
     mounted() {
       this.$store.commit('SET_REF', this.$refs);
+			console.log("TCL: mounted -> centerContainer", this.centerContainer)
     },
   }
 </script>
@@ -69,7 +70,7 @@ header {
 }
 
 .right-section-container{
-  left: 282px;
+  left: v-bind(centerContainer);
   position: absolute;
   border-radius: 10px;
   width: v-bind(desktopWidthForHome);

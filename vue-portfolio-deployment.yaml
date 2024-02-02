@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: portfolio-vue
+spec:
+ replicas: 3
+ selector:
+    matchLabels:
+      app: portfolio-vue
+ template:
+    metadata:
+      labels:
+        app: portfolio-vue
+    spec:
+      containers:
+      - name: portfolio-vue
+        image: esteban284/portfolio-vue
+        ports:
+        - containerPort: 8080

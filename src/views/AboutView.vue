@@ -203,7 +203,11 @@
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  margin-bottom: 100px
+  margin-bottom: 100px;
+  background-color: var(--primary-bg-color);
+  box-shadow: var(--first-shadow);
+  border-radius: 20px;
+  padding:20px;
 }
 .cards-technologies{
   display: flex;
@@ -215,6 +219,9 @@
   position: relative;
   width: 100%;
   padding-bottom: 70px;
+  box-shadow: var(--first-shadow);
+  border-radius: 20px;
+  padding:20px;
 }
 
 .about-title{
