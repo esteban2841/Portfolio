@@ -56,21 +56,19 @@
                     }
                 });
 
-                cardsRefs.forEach(element => {
-					console.log("TCL: mounted -> element", element.__vnode)
-                    this.observeCard()
+                cardsRefs.forEach(card => {
+                    const [element] = Object.values(card)[0]
+                    this.observeCard(element)
                 });
             })
         },
         methods: {
             observeCard(element) {
-				console.log("TCL: observeCard -> element", element)
-                const observer = new IntersectionObserver((entries) => {
-					console.log("TCL: observeCard -> entries", entries)
+				let observer = new IntersectionObserver((entries) => {
                     if (entries[0].isIntersecting) {
-                        element.classList.add('bounce-in');
+                        entries[0].target.classList.add('bounce');
                     }else{
-                        element.classList.remove('bounce-in');
+                        entries[0].target.classList.remove('bounce');
                     }
                 });
                 observer.observe(element);
@@ -129,6 +127,9 @@
         transform: rotate(90deg);
         
     }
+    .bounce{
+        animation: bounce-in 1s ease-in;
+    }
     @keyframes bounce-in {
         0% {
             opacity: 0;
@@ -141,8 +142,5 @@
         100% {
             transform: scale(1);    
         }
-    }
-    .timeline-container-education{
-        animation: bounce-in 1s;
     }
 </style>

@@ -80,6 +80,7 @@ header {
   flex-direction:column;
   justify-content: center;
   align-items: center;
+  background-color: var(--transparent-bg-color);
 }
 .right-section-container-pdf{
   left: 282px;

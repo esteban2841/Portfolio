@@ -73,7 +73,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-bg-color) !important;
+    background-color: var(--transparent-bg-color) !important;
   }
   .title-container{
     display: flex;
@@ -95,7 +95,7 @@
   
   .first-line, .second-line{
     font-size: 60px;
-    color: var(--primary-border-color);
+    color: var(--secondary-bg-color);
     
   }
   .tirdh-line, .fourth-line{

@@ -169,6 +169,7 @@
         justify-content: center;
         align-items: flex-end;
         box-sizing: border-box;
+        max-width: 900px;
     }
 
     .show-more-container{

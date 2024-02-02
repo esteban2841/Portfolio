@@ -2,6 +2,7 @@
     <div class="timeline-container" v-for="(card, index) in cards" 
         :id="card.key" 
         :ref="card.key"
+        :key="index"
     >
         <div class="icon-timeline">
             
@@ -42,35 +43,31 @@
             'cards',
         ], 
         mounted(){
-            this.$nextTick(()=>{
-				console.log("TCL: mounted -> this.$refs", )
-                const cardsRefs = this.cards.map(element => {
-                    const cardRef = {
-                        [element.key]:this.$refs[element.key]
-                    }
-                    
-					console.log("TCL: mounted -> cardRef", cardRef)
-                    return {
-                        [element.key]:this.$refs[element.key],
-                        ...cardRef
-                    }
-                });
+            console.log("TCL: mounted -> this.$refs", )
+            const cardsRefs = this.cards.map(card => {
+                const cardRef = {
+                    [card.key]:this.$refs[card.key]
+                }
+                
+                console.log("TCL: mounted -> cardRef", cardRef)
+                return {
+                    [card.key]:this.$refs[card.key],
+                }
+            });
+            console.log("TCL: mounted -> cardsRefs", cardsRefs)
 
-                cardsRefs.forEach(element => {
-					console.log("TCL: mounted -> element", element.__vnode)
-                    this.observeCard()
-                });
-            })
+            cardsRefs.forEach(card => {
+                const [element] = Object.values(card)[0]
+                this.observeCard(element)
+            });
         },
         methods: {
             observeCard(element) {
-				console.log("TCL: observeCard -> element", element)
-                const observer = new IntersectionObserver((entries) => {
-					console.log("TCL: observeCard -> entries", entries)
+                let observer = new IntersectionObserver((entries) => {
                     if (entries[0].isIntersecting) {
-                        element.classList.add('bounce-in');
+                        entries[0].target.classList.add('bounce');
                     }else{
-                        element.classList.remove('bounce-in');
+                        entries[0].target.classList.remove('bounce');
                     }
                 });
                 observer.observe(element);
@@ -141,7 +138,7 @@
             transform: scale(1);    
         }
     }
-    .timeline-container{
-        animation: bounce-in 1s;
+    .bounce{
+        animation: bounce-in 1s ease-in;
     }
 </style>

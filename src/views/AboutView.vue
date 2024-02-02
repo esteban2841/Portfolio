@@ -188,7 +188,7 @@
   color: var(--primary-font-color);
   position: relative;
   width: 100%;
-  background-color: var(--primary-bg-color);
+  background-color: var(--transparent-bg-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -204,8 +204,6 @@
   flex-wrap: wrap;
   position: relative;
   margin-bottom: 100px;
-  background-color: var(--primary-bg-color);
-  box-shadow: var(--first-shadow);
   border-radius: 20px;
   padding:20px;
 }
@@ -219,7 +217,6 @@
   position: relative;
   width: 100%;
   padding-bottom: 70px;
-  box-shadow: var(--first-shadow);
   border-radius: 20px;
   padding:20px;
 }

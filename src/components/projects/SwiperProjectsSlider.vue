@@ -122,6 +122,7 @@
         justify-content:center;
         align-items:center;
         box-sizing: border-box;
+        max-width: 900px;
     }
     .projects-card{
         display:flex;

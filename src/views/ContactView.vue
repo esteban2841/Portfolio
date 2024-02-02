@@ -27,7 +27,7 @@
         align-items:center;
         color: var(--primary-font-color);
         position: relative;
-        background-color: var(--primary-bg-color);
+        background-color: var(--transparent-bg-color);
     }
     
     .contact-section-title{

@@ -46,7 +46,7 @@ export default {
         color: var(--primary-font-color);
         justify-content: center;
         align-items: center;
-        background-color: var(--primary-bg-color);
+        background-color: var(--transparent-bg-color);
     }
     .skills-section-title{
         text-transform: uppercase;

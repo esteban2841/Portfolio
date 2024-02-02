@@ -25,7 +25,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        background-color: var(--primary-bg-color);
+        background-color: var(--transparent-bg-color);
         box-sizing: border-box;
         width: 100%;
         max-width: 1000px;
