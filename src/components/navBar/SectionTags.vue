@@ -2,7 +2,7 @@
     <div class="section-container">
         <a class="home section-tag" @click="getSelectedViewName">
             <HomeIcon class="section-icon"/>
-            <h2>{{$t('home_section_text')}}</h2>
+            <h2 class="home-section-title">{{$t('home_section_text')}}</h2>
         </a>
         <a class="about section-tag" @click="getSelectedViewName">
             <UserIcon class="section-icon"/>
@@ -63,11 +63,13 @@
         border-top: 0.5px solid var(--primary-border-color);
         border-bottom: 0.5px solid var(--primary-border-color);
         border-bottom: 0.5px solid var(--primary-border-color);
-        h2{
-            line-height: 0;
-            font-family: 'Unna', serif;
-            font-size: 24px;
-        }
+    }
+    
+    .home-section-title{
+        line-height: 0;
+        font-family: 'Unna', serif;
+        font-size: 24px;
+
     }
 
     .section-tag{

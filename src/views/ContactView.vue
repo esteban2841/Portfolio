@@ -1,6 +1,6 @@
 <template >
     <div class="contact-view-container">
-        <h1>{{ $t('contact_section_text') }}</h1>
+        <h1 class="contact-section-title">{{ $t('contact_section_text') }}</h1>
         <ContactForm/>
     </div>
 </template>
@@ -28,12 +28,14 @@
         color: var(--primary-font-color);
         position: relative;
         background-color: var(--primary-bg-color);
-        h1{
-            text-transform: uppercase;
-            border-bottom: 4px solid var(--primary-border-color);
-            padding-bottom: 10px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
+    }
+    
+    .contact-section-title{
+        text-transform: uppercase;
+        border-bottom: 4px solid var(--primary-border-color);
+        padding-bottom: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
     }
 </style>

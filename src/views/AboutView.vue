@@ -10,7 +10,7 @@
       </div>
       <div class="introduction-button">
         <button class="cv-opener" @click="toggleCvFile">
-          <p>
+          <p class="text-button-cv">
             {{$t('pdf_opener_text')}}
 
           </p>
@@ -245,9 +245,11 @@
   justify-content:center;
   align-items:center;
   cursor: pointer;
-  p{
-    z-index: 8
-  }
+}
+
+.text-button-cv{
+  z-index: 8
+
 }
 
 .tech_solution_text{

@@ -7,7 +7,7 @@
     <div class="photo-section">
         <div class="photo-mask">
             <div class="photo-container">
-                <img :src="photo" alt="photo"/>
+                <img class="cv-photo" :src="photo" alt="photo"/>
             </div>
             <div class="change-settings-container">
                 <div class="theme-settings-container" @click="changeColors">
@@ -113,10 +113,12 @@
     .photo-container{
         width: 90px;
         height: 90px;
-        img{
-            height: 92px;
-            border-radius: 5px;
-        }
+    }
+    
+    .cv-photo{
+        height: 92px;
+        border-radius: 5px;
+
     }
     .change-settings-container{
         display: flex;

@@ -87,21 +87,25 @@
     z-index: 2;
     color: var(--primary-font-color);
     font-family: 'Philosopher', sans-serif;
-    h1{
-      font-size: 60px;
-      color: var(--primary-border-color);
-    }
-    p{
-      font-family: 'Philosopher', sans-serif;
-      font-style: italic;
-      font-size: 20px;
-    }
     .professions-title{
       display: flex;
       gap: 5px;
     }
   }
   
+  .first-line, .second-line{
+    font-size: 60px;
+    color: var(--primary-border-color);
+    
+  }
+  .tirdh-line, .fourth-line{
+    font-family: 'Philosopher', sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    
+    
+  }
+
   .icon-container{
     background-color: var(--primary-bg-color);
     border: none;

@@ -14,5 +14,13 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  // optimizeDeps: {
+  //   exclude: ['pdfjs-dist', 'vue-pdf-embed'],
+  // },
+  // build: {
+  //   rollupOptions: {
+  //     external: ['pdfjs-dist', 'vue-pdf-embed'],
+  //   },
+  // },
 })

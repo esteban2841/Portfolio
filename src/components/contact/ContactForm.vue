@@ -1,21 +1,21 @@
 <template >
     <form ref="emailForm" @submit.prevent="handleSubmit" class="contact-form-container">
         <div class="name-container">
-            <input required placeholder="Name:" v-model="user_name" :name="user_name" type="text" />
+            <input class="input-form" required placeholder="Name:" v-model="user_name" :name="user_name" type="text" />
         </div>
         <div class="email-subject-container">
             <div class="email">
-                <input required placeholder="Email:" v-model="user_email" :name="user_email" type="text" />
+                <input class="input-form" required placeholder="Email:" v-model="user_email" :name="user_email" type="text" />
 
             </div>
             <div class="subject">
-                <input required placeholder="Subject:" v-model="subject" :name="subject" type="text" />
+                <input class="input-form" required placeholder="Subject:" v-model="subject" :name="subject" type="text" />
                 
             </div>
             
         </div>
         <div class="message-container">
-            <input required placeholder="Message:" v-model="message" :name="message" type="text" />
+            <input class="input-form" required placeholder="Message:" v-model="message" :name="message" type="text" />
 
         </div>
         <div class="button-container">
@@ -89,7 +89,7 @@
         display:flex;
         flex-direction: row;
         box-sizing: border-box;
-        input{
+        .input-form{
             width:100%;
             height: 53px;
             border-radius:10px;
@@ -98,12 +98,14 @@
             border: none;
             padding-left: 10px; 
         };
-        input::placeholder {
+        .input-form::placeholder {
             padding: 15px;
             color: var(--primary-font-color);
         }
         
     }
+
+    
     .email-subject-container{
         box-sizing: border-box;
         width: 100%;
@@ -116,7 +118,7 @@
         width:49%;
         height: 53px;
         box-sizing: border-box;
-        input{
+        .input-form{
             width:100%;
             box-sizing: border-box;
             border-radius: 10px;
@@ -125,7 +127,7 @@
             border: none;
             padding-left: 10px; 
         }
-        input::placeholder {
+        .input-form::placeholder {
             padding: 15px;
             color: var(--primary-font-color);
         }
@@ -134,7 +136,7 @@
         width:49%;
         box-sizing: border-box;
         height: 53px;
-        input{
+        .input-form{
             border-radius: 10px;
             box-sizing: border-box;
             width:100%;
@@ -143,7 +145,7 @@
             border: none;
             padding-left: 10px; 
         }
-        input::placeholder {
+        .input-form::placeholder {
             padding: 15px;
             color: var(--primary-font-color);
         }
@@ -155,7 +157,7 @@
         display:flex;
         flex-direction: row;
         height: 200px;
-        input{
+        .input-form{
             border-radius: 10px;
             box-sizing: border-box;
             width: 100%;
@@ -164,7 +166,7 @@
             border: none;
             padding-left: 10px; 
         }
-        input::placeholder {
+        .input-form::placeholder {
             padding: 15px;
             color: var(--primary-font-color);
         }

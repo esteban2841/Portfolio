@@ -1,6 +1,6 @@
 <template >
     <div class="projects-container">
-        <h1>{{$t('projects_section_text')}}</h1>
+        <h1 class="projects-title">{{$t('projects_section_text')}}</h1>
         <SwiperProjectSlider />
     </div>
 </template>
@@ -29,11 +29,11 @@
         box-sizing: border-box;
         width: 100%;
         max-width: 1000px;
-        h1{
-            text-transform: uppercase;
-            border-bottom: 2px solid var(--primary-border-color);
-            padding-bottom: 5px;
-            
-        }
+    }
+    .projects-title{
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--primary-border-color);
+        padding-bottom: 5px;
+
     }
 </style>

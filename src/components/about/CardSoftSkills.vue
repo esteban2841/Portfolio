@@ -2,13 +2,13 @@
     <div class="flip-card">
         <div class="flip-card-inner diamond">
             <div class="flip-card-front ">
-                <img :src="backImage"/>
+                <img class="back-image-cont" :src="backImage"/>
                 <component v-show="!!icon" :is="icon" class="icon-poker-card"></component>
                 <v-icon v-show="ohVue" scale="1.5" fill="black" :name="ohVue" class="icon-poker-card ohvue"></v-icon>
             </div>
             <div class="flip-card-back ">
                 <div class="skills-card-text">
-                    <h1>{{ $t(name) }}</h1>
+                    <h1 class="title-name-skill">{{ $t(name) }}</h1>
                     <text-area>{{ $t(name2) }}</text-area>
                 </div>
             </div>
@@ -68,20 +68,22 @@ export default {
         justify-content:center;
         align-items:center;
         border-radius: 20px;
-        img{
-            transform: rotate(180deg)
-        }
+    }
+    
+    .back-image-cont{
+        transform: rotate(180deg)
+
     }
     
     .flip-card-front {
         background-color: var(--primary-font-color);
         color: var(--primary-bg-color);
-        p{
-            transform: rotate(180deg);
-        }
         width: 100%;
         height: 100%;
         transform: rotate(135deg);
+    }
+    .title-name-skill{
+        transform: rotate(180deg);
     }
     .ohvue{
         position: absolute;
@@ -141,19 +143,18 @@ export default {
             perspective: 1000px;
             
         }
-        .flip-card-front {
-            img{
-                width: 150px;
-                height: 250px;
-            }
-            
+        .back-image-cont{
+            width: 150px;
+            height: 250px;
+
         }
         .flip-card-back {
             font-size: 14px !important;
-            h1{
-                font-size: 17px !important;
-                
-            }
+            
+        }
+        .title-name-skill{
+            font-size: 17px !important;
+
         }
     }
 
