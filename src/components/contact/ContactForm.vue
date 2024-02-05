@@ -177,7 +177,6 @@
         display:flex;
         align-items:center;
         justify-content:center;
-        cursor: pointer;
     }
     .send-button{
         width: 327px;
@@ -186,6 +185,7 @@
         background-color: var(--primary-border-color);
         color: var(--primary-font-color);
         border-radius: 10px;
+        cursor: pointer;
     }
     @media only screen and (max-width: 1000px) and (min-width: 750px) {
         .contact-form-container{

@@ -54,8 +54,8 @@
         <p class="fourth-line">{{$t('profession_text_snd_line')}}</p>
 
       </div>
-      <button class="about icon-container" @click.prevent="getSelectedViewName">
-        <ChevronDoubleDownIcon class="about menu-icon"/>
+      <button class="about icon-container-menu" @click.prevent="getSelectedViewName">
+        <ChevronDoubleDownIcon class="about menu-icon-doublearrow"/>
       </button>
     </div>
 
@@ -95,7 +95,7 @@
   
   .first-line, .second-line{
     font-size: 60px;
-    color: var(--secondary-bg-color);
+    color: var(--third-font-color);
     
   }
   .tirdh-line, .fourth-line{
@@ -106,19 +106,20 @@
     
   }
 
-  .icon-container{
+  .icon-container-menu{
     background-color: var(--primary-bg-color);
     border: none;
-    position: absolute;
+    position: relative;
     bottom: -150px;
     width: 60px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100px;
   }
 
-  .icon-container:hover{
+  .icon-container-menu:hover{
     background-color: var(--secondary-bg-color);
     border: none;
     cursor: pointer;
@@ -128,9 +129,22 @@
     width: 40px;
     fill: var(--primary-font-color) !important;
     z-index: 5;
-    position: absolute;
+    position: relative;
     top: 5px;
     left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-icon-doublearrow{
+    width: 40px;
+    fill: var(--primary-font-color) !important;
+    z-index: 5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   
