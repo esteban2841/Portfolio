@@ -129,7 +129,7 @@
     width: 40px;
     fill: var(--primary-font-color) !important;
     z-index: 5;
-    position: relative;
+    position: absolute;
     top: 5px;
     left: 5px;
     display: flex;
