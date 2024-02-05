@@ -182,7 +182,7 @@
         width: 327px;
         height: 53px;
         border: 1px solid var(--primary-border-color);
-        background-color: var(--primary-border-color);
+        background-color: var(--secondary-bg-color);
         color: var(--primary-font-color);
         border-radius: 10px;
         cursor: pointer;
