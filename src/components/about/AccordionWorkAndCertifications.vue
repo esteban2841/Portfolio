@@ -171,8 +171,9 @@
         box-sizing: border-box;
         max-width: 900px;
     }
-
+    
     .show-more-container{
+        cursor: pointer;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -184,10 +185,11 @@
         height: 70px;
         fill: #ff9100;
     }
-
+    
     .show-less-container{
         display: flex;
         flex-direction: row;
+        cursor: pointer;
         align-items: center;
     }
 

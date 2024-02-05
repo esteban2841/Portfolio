@@ -240,7 +240,7 @@
   width:115px;
   height: 40px;
   border-radius: 10px;
-  background-color: transparent;
+  background-color: var(--terciary-bg-color);
   border: solid 2px var(--primary-font-color);
   color: var(--primary-font-color);
   overflow: hidden;
