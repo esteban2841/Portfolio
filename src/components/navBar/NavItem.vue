@@ -43,12 +43,13 @@
         box-sizing: border-box;
         z-index: 11;
         opacity: 1;
+        justify-content: flex-end;
     }
 
     @media (max-width: 750px){
         .navBar{
             width:100%;
-            position: relative;
+            position: fixed;
             height: 100vh;
         }
     }
