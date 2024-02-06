@@ -54,7 +54,8 @@
         height: 92px;
         background-color: var(--secondary-bg-color);
         box-sizing: border-box;
-        position:absolute;
+        position:relative;
+        opacity: 1;
         @media (max-width: 750px){
             width:100%;
             justify-self: flex-end;

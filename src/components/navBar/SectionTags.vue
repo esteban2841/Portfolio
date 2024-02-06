@@ -63,6 +63,7 @@
         border-top: 0.5px solid var(--primary-border-color);
         border-bottom: 0.5px solid var(--primary-border-color);
         border-bottom: 0.5px solid var(--primary-border-color);
+        overflow-y: scroll;
     }
     
     .home-section-title{
