@@ -6,6 +6,7 @@
   import About from './views/AboutView.vue';
   import {XIcon} from 'heroicons-vue3/solid'
   import PdfEmbed from 'vue-pdf-embed';
+	console.log("TCL: PdfEmbed", PdfEmbed)
   import SkillsView from './views/SkillsView.vue';
   import ProjectsView from './views/ProjectsView.vue';
   import ContactView from './views/ContactView.vue';
