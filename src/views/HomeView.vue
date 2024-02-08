@@ -125,6 +125,7 @@
     font-family: 'Philosopher', sans-serif;
     .professions-title{
       display: flex;
+      flex-wrap: wrap;
       gap: 5px;
     }
   }
