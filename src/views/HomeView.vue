@@ -20,7 +20,10 @@
       ...mapActions(['toggleNavBar',]),
       getSelectedViewName (event) {
         const selectedView = event.currentTarget.classList[0]
-        this.$store.dispatch('scrollToSection', selectedView);
+        const htmlElement = this.$store.state.ref[selectedView].$el
+				console.log("TCL: getSelectedViewName -> selectedView", selectedView)
+				console.log("TCL: getSelectedViewName -> htmlElement", htmlElement)
+        this.$store.dispatch('scrollToSection', htmlElement);
       }
     },
     computed:{
