@@ -43,7 +43,7 @@
         box-sizing: border-box;
         z-index: 11;
         opacity: 1;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
 
     @media (max-width: 750px){

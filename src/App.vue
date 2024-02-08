@@ -42,7 +42,7 @@
   <header v-show="isNavOpen">
     <NavItem/>
   </header>
-  <div class="right-section-container" v-show="!isCvOpened">
+  <div class="right-section-container" v-show="!isCvOpened" ref="parent">
     <Home ref="home"/>
     <About ref="about"/>
     <SkillsView ref="skills" />

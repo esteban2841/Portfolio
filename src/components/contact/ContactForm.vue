@@ -5,7 +5,7 @@
         </div>
         <div class="email-subject-container">
             <div class="email">
-                <input class="input-form" required placeholder="Email:" v-model="user_email" :name="user_email" type="text" />
+                <input class="input-form" required placeholder="Email:" v-model="user_email" :name="user_email" type="email" />
 
             </div>
             <div class="subject">

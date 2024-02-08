@@ -32,15 +32,20 @@
                 
             }
         },computed:{
-            ...mapState(['activeView']),
+            ...mapState(['activeView', 'mobile']),
         },methods: {
             getSelectedViewName (event) {
-				console.log("TCL: getSelectedViewName -> event", event)
                 const selectedView = event.currentTarget.classList[0]
-				console.log("TCL: getSelectedViewName -> selectedView", selectedView)
-				console.log("TCL: getSelectedViewName -> this.$store", this.$store, selectedView)
-                this.$store.dispatch('scrollToSection', selectedView);
-            }
+                const element = this.$store.state.ref[selectedView].$el
+                if(this.mobile){
+                    this.toggleNavBar()
+                    this.scrollToSection(element)
+                }else{
+                    this.scrollToSection(element)
+
+                }
+            },
+            ...mapActions(['toggleNavBar', 'scrollToSection'])
         },
         components:{
             HomeIcon,

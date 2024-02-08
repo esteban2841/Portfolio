@@ -1,9 +1,10 @@
 import { createStore } from 'vuex'
 import {i18n} from './main';
-
+import { ref } from 'vue';
 const isMobile = window.innerWidth < 750
 // Create a new store instance.
-console.log("TCL: state -> window.innerWidth - 280 -20 + 'px'", window.innerWidth - 280 -20 + 'px')
+const myElementRef = ref(null);
+
 export const store = createStore({
     state () {
         return {
@@ -18,6 +19,7 @@ export const store = createStore({
             isCvOpened: false,
             showMore: false,
             isAppThemeDark: true,
+            currentView: "home"
         }
     },
     mutations: {
@@ -34,11 +36,21 @@ export const store = createStore({
         setLocaleLang({commit}, localeName){
             commit('SET_LOCALE_LANG', localeName)
         },
-        toggleNavBar ({state}) {
+        toggleNavBar ({state, dispatch}) {
             state.isNavOpen = !state.isNavOpen
         },
-        scrollToSection({ commit, state }, section) {
-            state.ref[section].$el.scrollIntoView({ behavior: 'smooth' });
+        scrollToSection({ state, dispatch }, sectionHtml) {
+            console.log("TCL: scrollToSection line 51-> section", sectionHtml)
+            if( state.mobile ){
+				console.log("TCL: scrollToSection -> state.mobile", state.mobile)
+                sectionHtml.scrollIntoView({ behavior: 'smooth' });
+                dispatch('scrollUpByViewportHeight')
+            }else{
+                
+                
+				console.log("TCL: scrollToSection -> state.ref[section].$el", sectionHtml)
+                sectionHtml.scrollIntoView({ behavior: 'smooth' });
+            }
         },
         openLocaleList({state}){
             state.isLocaleListOpen = !state.isLocaleListOpen
@@ -47,14 +59,25 @@ export const store = createStore({
             state.isCvOpened = !state.isCvOpened
         },
         toggleShowMore({state}){
-			console.log("TCL: toggleCvFile -> state", state)
             state.showMore = !state.showMore
-			console.log("TCL: toggleCvFile -> state2", state)
+        },
+        scrollUpByViewportHeight() {
+            if (myElementRef.value) {
+              // Calculate the new scroll position
+              const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+              console.log("TCL: scrollUpByViewportHeight -> currentScrollPosition", currentScrollPosition)
+              const newScrollPosition = currentScrollPosition;
+              console.log("TCL: scrollUpByViewportHeight -> newScrollPosition", newScrollPosition)
+          
+              // Scroll to the new position
+              window.scrollTo({
+                top: newScrollPosition,
+                behavior: 'smooth' // Optional: Smooth scrolling effect
+              });
+            }
         },
         toggleTheme({state}){
-            console.log("TCL: toggleCvFile -> state", state)
             state.isAppThemeDark = !state.isAppThemeDark
-            console.log("TCL: toggleCvFile -> state2", state)
             if(state.isAppThemeDark){
                 document.documentElement.style.setProperty('--primary-bg-color', '#212121')
                 document.documentElement.style.setProperty('--primary-font-color', '#fff')
