@@ -12,7 +12,7 @@
   export default {
     data() {
       return {
-        pdfUrl: './common/CV_ENGLISH.pdf'
+        pdfUrl: '../public/CV_ENGLISH.pdf'
         }
       },
     components:{
