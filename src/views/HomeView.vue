@@ -7,10 +7,15 @@
   import { createApp } from 'vue'
 
   const ParticlesChunk = createApp(ParticlesImplemented)
-
+  const texts = [
+    'profession_text_first_line',
+    'profession_text_snd_line'
+  ]
   export default {
     data() {
       return {
+        text1:'',
+        text2: '',
         styleObject: {
           width: this.desktopWidthForHome,
         }
@@ -24,7 +29,33 @@
 				console.log("TCL: getSelectedViewName -> selectedView", selectedView)
 				console.log("TCL: getSelectedViewName -> htmlElement", htmlElement)
         this.$store.dispatch('scrollToSection', htmlElement);
-      }
+      },
+      typeWrittingEffect (){
+        let text = this.$t(texts[0]);
+        
+				console.log("TCL: typeWrittingEffect -> text", text)
+        let index = 0;
+        const typeInterval = setInterval(()=>{
+          if(index < text.length){
+            this.text1 += text.charAt(index)
+            index++
+          }else{
+            clearInterval(typeInterval)
+          }
+        }, 100)
+      },
+      typeWrittingEffect2 (){
+        let text = this.$t(texts[1]);
+        let index = 0;
+        const typeInterval = setInterval(()=>{
+          if(index < text.length){
+            this.text2 += text.charAt(index);
+            index++
+          }else{
+            clearInterval(typeInterval)
+          }
+        }, 100)
+      },
     },
     computed:{
       ...mapState(['isAppThemeDark','isNavOpen', 'mobile', 'desktopWidthForHome'])
@@ -42,6 +73,8 @@
         },
       })
       ParticlesChunk.mount('#tsparticles')
+      this.typeWrittingEffect()
+      this.typeWrittingEffect2()
     },
   }
 </script>
@@ -52,10 +85,10 @@
     <div class="title-container">
       <h1 class="first-line">Esteban</h1>
       <h1 class="second-line">Puentes</h1>
-      <div class="professions-title">
+      <div class="professions-title" >
         <p class="tirdh-line">{{ $t('profession_text_first_line') }}</p>
-        <p class="fourth-line">{{$t('profession_text_snd_line')}}</p>
-
+        <p class="tirdh-line">{{ text2 }}</p>
+        <v-icon name="" />
       </div>
       <button class="about icon-container-menu" @click.prevent="getSelectedViewName">
         <ChevronDoubleDownIcon class="about menu-icon-doublearrow"/>
