@@ -6,16 +6,15 @@
   import About from './views/AboutView.vue';
   import {XIcon} from 'heroicons-vue3/solid'
   import PdfEmbed from 'vue-pdf-embed';
-	console.log("TCL: PdfEmbed", PdfEmbed)
   import SkillsView from './views/SkillsView.vue';
   import ProjectsView from './views/ProjectsView.vue';
   import ContactView from './views/ContactView.vue';
   export default {
     data() {
-        return {
-          pdfUrl: './common/i18n/CV_ENGLISH.pdf'
+      return {
+        pdfUrl: './common/i18n/CV_ENGLISH.pdf'
         }
-    },
+      },
     components:{
       NavItem,
       Home,
@@ -34,6 +33,7 @@
     },
     mounted() {
       this.$store.commit('SET_REF', this.$refs);
+      console.log("TCL: PdfEmbed", PdfEmbed)
 			console.log("TCL: mounted -> this.pdfUrl", this.pdfUrl)
     },
   }
