@@ -60,7 +60,6 @@
     import pokemonsPhoto from '../../assets/projectImages/pokemonsApp.png'
 
     const projectImages = [devsNFTPhoto,onlineNaturePhoto, pokemonsPhoto]
-	console.log("TCL: projectImages", projectImages)
 
     const projectCards = [
         {

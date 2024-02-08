@@ -33,7 +33,7 @@
     },
     mounted() {
       this.$store.commit('SET_REF', this.$refs);
-			console.log("TCL: mounted -> centerContainer", this.centerContainer)
+			console.log("TCL: mounted -> this.pdfUrl", this.pdfUrl)
     },
   }
 </script>

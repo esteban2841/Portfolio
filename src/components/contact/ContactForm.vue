@@ -50,7 +50,6 @@
                     subject: this.subject
                     
                 }
-                console.log("TCL: handleSubmit -> data", data)
                 this.sendEmail(data)
             },
             sendEmail(data){

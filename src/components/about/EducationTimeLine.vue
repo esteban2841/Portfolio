@@ -43,13 +43,11 @@
         ], 
         mounted(){
             this.$nextTick(()=>{
-				console.log("TCL: mounted -> this.$refs", )
                 const cardsRefs = this.cards.map(element => {
                     const cardRef = {
                         [element.key]:this.$refs[element.key]
                     }
                     
-					console.log("TCL: mounted -> cardRef", cardRef)
                     return {
                         [element.key]:this.$refs[element.key],
                         ...cardRef

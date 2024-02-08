@@ -24,7 +24,6 @@ export const store = createStore({
     },
     mutations: {
         SET_LOCALE_LANG (state, key) {
-			console.log("TCL: SET_LOCALE_LANG -> key", key)
             state.lang = key
         },
         SET_REF(state, payload) {
@@ -40,15 +39,12 @@ export const store = createStore({
             state.isNavOpen = !state.isNavOpen
         },
         scrollToSection({ state, dispatch }, sectionHtml) {
-            console.log("TCL: scrollToSection line 51-> section", sectionHtml)
             if( state.mobile ){
-				console.log("TCL: scrollToSection -> state.mobile", state.mobile)
                 sectionHtml.scrollIntoView({ behavior: 'smooth' });
                 dispatch('scrollUpByViewportHeight')
             }else{
                 
                 
-				console.log("TCL: scrollToSection -> state.ref[section].$el", sectionHtml)
                 sectionHtml.scrollIntoView({ behavior: 'smooth' });
             }
         },
@@ -65,9 +61,7 @@ export const store = createStore({
             if (myElementRef.value) {
               // Calculate the new scroll position
               const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-              console.log("TCL: scrollUpByViewportHeight -> currentScrollPosition", currentScrollPosition)
               const newScrollPosition = currentScrollPosition;
-              console.log("TCL: scrollUpByViewportHeight -> newScrollPosition", newScrollPosition)
           
               // Scroll to the new position
               window.scrollTo({

@@ -6,10 +6,7 @@
             }
         },methods:{
             getSelectedViewName (event) {
-				console.log("TCL: getSelectedViewName -> event", event)
                 const selectedView = event.currentTarget.classList[0]
-				console.log("TCL: getSelectedViewName -> selectedView", selectedView)
-				console.log("TCL: getSelectedViewName -> this.$store", this.$store, selectedView)
                 this.$store.dispatch('scrollToSection', selectedView);
             }
         }

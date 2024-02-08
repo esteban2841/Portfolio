@@ -43,18 +43,15 @@
             'cards',
         ], 
         mounted(){
-            console.log("TCL: mounted -> this.$refs", )
             const cardsRefs = this.cards.map(card => {
                 const cardRef = {
                     [card.key]:this.$refs[card.key]
                 }
                 
-                console.log("TCL: mounted -> cardRef", cardRef)
                 return {
                     [card.key]:this.$refs[card.key],
                 }
             });
-            console.log("TCL: mounted -> cardsRefs", cardsRefs)
 
             cardsRefs.forEach(card => {
                 const [element] = Object.values(card)[0]
