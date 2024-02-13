@@ -179,6 +179,10 @@
         align-items: center;
         justify-content: flex-end;
     }
+    .show-more-container:hover{
+        transform: scale(1.1);
+    }
+
     .icon-show-more{
         display: flex;
         width: 70px;
@@ -191,6 +195,10 @@
         flex-direction: row;
         cursor: pointer;
         align-items: center;
+    }
+
+    .show-less-container:hover{
+        transform: scale(1.1);
     }
 
     .vertical-timeline-container{

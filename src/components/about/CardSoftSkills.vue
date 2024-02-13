@@ -67,6 +67,9 @@ export default {
         display: flex;
         justify-content:center;
         align-items:center;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 5px;
         border-radius: 20px;
     }
     
