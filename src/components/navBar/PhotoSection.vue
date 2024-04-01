@@ -98,7 +98,6 @@
     .photo-section{
         display: flex;
         width: 100%;
-        height: 170px;
         padding: 20px;
         box-sizing: border-box;
     }
@@ -106,7 +105,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 50px;
         align-items: flex-end;
         width: 100%;
     }
