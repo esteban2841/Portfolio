@@ -72,10 +72,11 @@
     }
     
     .home-section-title{
-        line-height: 0;
-        font-family: 'Unna', serif;
-        font-size: 24px;
-
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:"wdth" 100;
     }
 
     .section-tag{
