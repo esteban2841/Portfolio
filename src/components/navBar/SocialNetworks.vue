@@ -47,7 +47,7 @@
 <style scoped>
     .social-networks-container{
         bottom: 0px;
-        width: 260px;
+        width: 300px;
         height: 92px;
         background-color: var(--secondary-bg-color);
         box-sizing: border-box;

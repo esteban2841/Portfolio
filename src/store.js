@@ -13,7 +13,7 @@ export const store = createStore({
             mobile: isMobile,
             isNavOpen: true,
             desktopWidthForHome: window.innerWidth - 280 + 'px',
-            centerContainer: !isMobile && 280 + 'px',
+            centerContainer: !isMobile && 320 + 'px',
             activeView: "home",
             isLocaleListOpen: false,
             isCvOpened: false,

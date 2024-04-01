@@ -68,7 +68,8 @@
         border-top: 0.5px solid var(--primary-border-color);
         border-bottom: 0.5px solid var(--primary-border-color);
         border-bottom: 0.5px solid var(--primary-border-color);
-        overflow-y: scroll;
+        overflow-y: hidden;
+        box-sizing:border-box;
     }
     
     .home-section-title{
@@ -98,4 +99,12 @@
         height: 24px;
         fill: var(--primary-font-color);
     }
+
+    @media (max-width: 750px){
+        .section-container{
+            overflow-y: scroll;
+        }
+    }
+
+    
 </style>

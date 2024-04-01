@@ -107,6 +107,7 @@
         justify-content: space-between;
         align-items: flex-end;
         width: 100%;
+        gap: 10px
     }
     .photo-container{
         width: 150px;
@@ -157,7 +158,7 @@
         height: 30px;
     }
     .locale-settings-container{
-        width: 130px;
+        width: 110px;
         height: 42px;
         background-color: transparent;
         border-radius: 5px;

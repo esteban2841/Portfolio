@@ -37,7 +37,7 @@
         display: flex;
         flex-direction: column;
         position: fixed;
-        width: 260px;
+        width: 300px;
         background-color: var(--primary-bg-color);
         height: 100%;
         box-sizing: border-box;
