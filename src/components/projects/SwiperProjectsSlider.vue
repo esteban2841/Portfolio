@@ -213,6 +213,15 @@
         width:100%
     }
 
+    .swiper-button-prev{
+        left: 1px;
+
+    }
+    .swiper-button-next{
+        right: -2px;
+
+    }
+
     @media (max-width: 750px){
   
         .swiper-container{
