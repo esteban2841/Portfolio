@@ -75,7 +75,7 @@
 <style scoped>
     .close-container{
         display: flex;
-        padding: 10px;
+        padding: 20px;
         width: 100%;
         height: 70px;
         justify-content: flex-end;
@@ -99,7 +99,7 @@
         display: flex;
         width: 100%;
         height: 170px;
-        padding: 10px;
+        padding: 20px;
         box-sizing: border-box;
     }
     .photo-mask{
@@ -111,13 +111,16 @@
         width: 100%;
     }
     .photo-container{
-        width: 90px;
-        height: 90px;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 20px;
     }
     
     .cv-photo{
-        height: 92px;
         border-radius: 5px;
+        object-fit: none;
+        object-position: -70px -13px;
 
     }
     .change-settings-container{

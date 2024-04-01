@@ -60,7 +60,7 @@
     .section-container{
         width: 100%;
         color: var(--primary-font-color);
-        padding: 5px 10px;
+        padding: 5px 20px;
         margin-top: 20px;
         gap: 10px;
         display: flex;
@@ -89,7 +89,6 @@
 
     .section-tag:hover{
         cursor: pointer;
-        padding-left: 5px;
         border-radius: 10px;
         background-color: var(--secondary-bg-color);
     }
