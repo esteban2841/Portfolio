@@ -126,6 +126,7 @@
     .professions-title{
       display: flex;
       flex-wrap: wrap;
+      width: 430px;
       gap: 5px;
     }
   }
@@ -196,9 +197,17 @@
     justify-content: center;
     align-items: center;
   }
-  .professions-title{
-    display:flex;
-    flex-direction: column;
+
+  .title-container{
+    width: 100%;
+    
+    .professions-title{
+      display:flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
   }
+  
 }
   </style>

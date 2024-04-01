@@ -72,11 +72,11 @@ header {
 
 .right-section-container{
   left: v-bind(centerContainer);
+  box-sizing: border-box;
   position: absolute;
   border-radius: 10px;
   width: v-bind(desktopWidthForHome);
   overflow:hidden;
-  max-width: 1000px;
   display:flex;
   flex-direction:column;
   justify-content: center;
