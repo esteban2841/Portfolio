@@ -73,14 +73,6 @@
     }
 </script>
 <style scoped>
-    .close-container{
-        display: flex;
-        padding: 20px;
-        width: 100%;
-        height: 70px;
-        justify-content: flex-end;
-        box-sizing: border-box;
-    }
     .close-icon-container{
         width: 40px;
         height: 40px;
@@ -190,5 +182,16 @@
         align-items: center;
         text-transform: uppercase;
         z-index: 5;
+    }
+    
+    @media (max-width: 750px) {
+        .close-container{
+            display: flex;
+            padding: 20px;
+            width: 100%;
+            height: 70px;
+            justify-content: flex-end;
+            box-sizing: border-box;
+        }
     }
 </style>

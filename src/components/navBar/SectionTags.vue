@@ -1,22 +1,22 @@
 <template >
     <div class="section-container">
-        <a class="home section-tag" @click="getSelectedViewName">
+        <a class="home section-tag font" @click="getSelectedViewName">
             <HomeIcon class="section-icon"/>
             <h2 class="home-section-title">{{$t('home_section_text')}}</h2>
         </a>
-        <a class="about section-tag" @click="getSelectedViewName">
+        <a class="about section-tag font" @click="getSelectedViewName">
             <UserIcon class="section-icon"/>
             <h2>{{$t('about_section_text')}}</h2>
         </a>
-        <a class="skills section-tag" @click="getSelectedViewName">
+        <a class="skills section-tag font" @click="getSelectedViewName">
             <InformationCircleIcon  class="section-icon"/>
             <h2>{{$t('skills_section_text')}}</h2>
         </a>
-        <a class="projects section-tag" @click="getSelectedViewName">
+        <a class="projects section-tag font" @click="getSelectedViewName">
             <ArchiveIcon class="section-icon"/>
             <h2>{{$t('projects_section_text')}}</h2>
         </a>
-        <a class="contact section-tag" @click="getSelectedViewName">
+        <a class="contact section-tag font" @click="getSelectedViewName">
             <MailOpenIcon class="section-icon"/>
             <h2>{{$t('contact_section_text')}}</h2>
         </a>
@@ -71,13 +71,13 @@
         overflow-y: hidden;
         box-sizing:border-box;
     }
-    
-    .home-section-title{
+
+    .font{
         font-family: "Noto Sans", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 400;
+        font-weight: 200 !important;
         font-style: normal;
-        font-variation-settings:"wdth" 100;
+        font-variation-settings:"wdth" 70;
     }
 
     .section-tag{
