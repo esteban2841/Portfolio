@@ -119,7 +119,8 @@
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
-        gap: 15px
+        height: 100%;
+        gap: 15px;
 
     }
     .sun-icon{

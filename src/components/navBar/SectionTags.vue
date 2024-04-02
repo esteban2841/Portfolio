@@ -2,23 +2,23 @@
     <div class="section-container">
         <a class="home section-tag font" @click="getSelectedViewName">
             <HomeIcon class="section-icon"/>
-            <h2 class="home-section-title">{{$t('home_section_text')}}</h2>
+            <h2 class="home-section-title font">{{$t('home_section_text')}}</h2>
         </a>
         <a class="about section-tag font" @click="getSelectedViewName">
             <UserIcon class="section-icon"/>
-            <h2>{{$t('about_section_text')}}</h2>
+            <h2 class="font">{{$t('about_section_text')}}</h2>
         </a>
         <a class="skills section-tag font" @click="getSelectedViewName">
             <InformationCircleIcon  class="section-icon"/>
-            <h2>{{$t('skills_section_text')}}</h2>
+            <h2 class="font">{{$t('skills_section_text')}}</h2>
         </a>
         <a class="projects section-tag font" @click="getSelectedViewName">
             <ArchiveIcon class="section-icon"/>
-            <h2>{{$t('projects_section_text')}}</h2>
+            <h2 class="font">{{$t('projects_section_text')}}</h2>
         </a>
-        <a class="contact section-tag font" @click="getSelectedViewName">
+        <a class="contact section-tag" @click="getSelectedViewName">
             <MailOpenIcon class="section-icon"/>
-            <h2>{{$t('contact_section_text')}}</h2>
+            <h2 class="font">{{$t('contact_section_text')}}</h2>
         </a>
 
     </div>
@@ -61,15 +61,13 @@
         width: 100%;
         color: var(--primary-font-color);
         padding: 5px 20px;
-        margin-top: 20px;
         gap: 10px;
         display: flex;
         flex-direction: column;
-        border-top: 0.5px solid var(--primary-border-color);
-        border-bottom: 0.5px solid var(--primary-border-color);
-        border-bottom: 0.5px solid var(--primary-border-color);
+        border-top: 1px solid var(--secondary-bg-color);
         overflow-y: hidden;
         box-sizing:border-box;
+        
     }
 
     .font{
