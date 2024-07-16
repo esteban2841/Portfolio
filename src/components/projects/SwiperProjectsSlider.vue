@@ -58,8 +58,9 @@
     import devsNFTPhoto from '../../assets/projectImages/7devsNFT.png'
     import onlineNaturePhoto from '../../assets/projectImages/onlineNature.png'
     import pokemonsPhoto from '../../assets/projectImages/pokemonsApp.png'
+    import wardonsScreen from '../../assets/projectImages/wardons-screen.png'
 
-    const projectImages = [devsNFTPhoto,onlineNaturePhoto, pokemonsPhoto]
+    const projectImages = [devsNFTPhoto,onlineNaturePhoto, pokemonsPhoto, wardonsScreen]
 
     const projectCards = [
         {
@@ -67,7 +68,7 @@
             url: "https://wardons-club.vercel.app/",
             frontend: ['React', 'Next', 'useReducer', 'styled-components', 'vanilla js', 'tailwind', 'mapbox js'],
             backend: ['Next', 'Supabase'],
-            backImg: projectImages[1],
+            backImg: projectImages[3],
             description: 'experience_card_job0_goals_title_text'
         },
         {
