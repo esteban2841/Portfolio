@@ -63,6 +63,14 @@
 
     const projectCards = [
         {
+            name: "Wardons club",
+            url: "https://wardons-club.vercel.app/",
+            frontend: ['React', 'Next', 'useReducer', 'styled-components', 'vanilla js', 'tailwind', 'mapbox js'],
+            backend: ['Next', 'Supabase'],
+            backImg: projectImages[1],
+            description: 'experience_card_job0_goals_title_text'
+        },
+        {
             name: "Online nature",
             url: "https://online-nature-pf-front-git-main-ezeluiten.vercel.app/",
             frontend: ['React', 'Auth0', 'Redux', 'styled-components', 'vanilla js', 'material ui', 'formik'],

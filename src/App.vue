@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { RouterView } from 'vue-router'
   import NavItem from './components/navBar/NavItem.vue';
   import { mapState, mapActions } from "vuex";
