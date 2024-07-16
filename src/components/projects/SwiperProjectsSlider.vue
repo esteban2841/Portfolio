@@ -165,7 +165,7 @@
         box-sizing: border-box;
         padding: 10px;
         background-repeat: no-repeat;
-        background-size: 210% 110%;
+        background-size: contain;
     }
     .frontend-technologies-container{
         display:flex;
