@@ -99,9 +99,8 @@ export default {
 </script>
 <style >
     .paticles-container{
-        width: 700px !important;
-        height: 100vh !important;
-        position: relative;
+        width: 100%;
+        position: absolute;
     }
 </style>
 

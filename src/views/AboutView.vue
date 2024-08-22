@@ -297,7 +297,8 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  max-width: 1000px;
+  max-width: 900px;
+  width: 100%
 }
 
 .introduction-text{

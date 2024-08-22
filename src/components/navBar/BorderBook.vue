@@ -1,5 +1,5 @@
 <template >
-    <div class="border-container" v-show="!mobile" @click="toggleCvFile">
+    <div class="border-container" @click="toggleCvFile">
         <v-icon class="doble-right" scale="1.5" name="md-keyboarddoublearrowright"/>
     </div>
 </template>
@@ -22,9 +22,8 @@ import { mapActions, mapState } from 'vuex'
 <style>
     .border-container {
         display: flex;
-        position: absolute;
+        position: relative;
         height: 100%;
-        left: 300px;
         width: 20px;
         background-color: var(--secondary-bg-color);
         border-radius: 0px 220px 220px 0px;

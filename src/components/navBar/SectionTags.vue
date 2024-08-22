@@ -65,7 +65,7 @@
         display: flex;
         flex-direction: column;
         border-top: 1px solid var(--secondary-bg-color);
-        overflow-y: hidden;
+        overflow-y: hidden !important;
         box-sizing:border-box;
         
     }

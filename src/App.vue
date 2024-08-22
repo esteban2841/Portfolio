@@ -67,28 +67,30 @@
 header {
   padding: 0;
   margin: 0;
-  width: 260px;
+  width: 300px;
+  top: 0;
+  height: auto;
+  display: flex;
 }
 
 .right-section-container{
-  left: v-bind(centerContainer);
   box-sizing: border-box;
-  position: absolute;
   border-radius: 10px;
-  width: v-bind(desktopWidthForHome);
+  width: 100%;
   overflow:hidden;
   display:flex;
+  position: relative;
   flex-direction:column;
   justify-content: center;
   align-items: center;
   background-color: var(--transparent-bg-color);
 }
 .right-section-container-pdf{
-  left: 282px;
-  position: relative;
+  position: absolute;
   border-radius: 10px;
-  height: 100vh;
-  width: v-bind(mobile ? '100%' : desktopWidthForHome);
+  width: 100%;
+  z-index: 100;
+  top: 0;
 }
  
 .close-icon-section-pdf{
@@ -124,15 +126,6 @@ header {
 @media (max-width: 750px){
   header{
     width: 100%;
-  }
-  .right-section-container{
-    left: 0;
-    width: 100%;
-    top: v-bind(isNavOpen && '100vh')
-  }
-  .right-section-container-pdf{
-    width: 100%;
-    left:0;
   }
   .vue-pdf-embed{
     width: 100%;

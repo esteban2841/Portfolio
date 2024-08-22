@@ -166,7 +166,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-end;
         box-sizing: border-box;
         max-width: 900px;
@@ -205,7 +205,6 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         gap: 30px;
 
     }

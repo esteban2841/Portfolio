@@ -103,8 +103,6 @@
     box-sizing: border-box;
     height: 100vh;
     width: 100%;
-    padding: 20px;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,9 +115,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 50%;
     line-height: 0px;
-    left: 0;
     z-index: 2;
     color: var(--primary-font-color);
     font-family: 'Philosopher', sans-serif;
