@@ -11,7 +11,10 @@
     >
         <swiper-slide class="slide-content-container" v-for="(item, index) in projectCards" :key="index">
             <a :href="item.url" class="projects-card" >
-                <div class="header-card" :style="{ backgroundImage: 'url(' + item.backImg + ')'}">
+                <div class="header-card" :style="{ 
+                    backgroundImage: 'url(' + item.backImg + ')',
+                    backgroundSize: 'cover',
+                }">
                     <div class="frontend-technologies-container" >
                         <div>
                             <h2 >Frontend: </h2>
