@@ -55,7 +55,7 @@
     .left-side {
         display:flex;
         flex-direction: column;
-        justify-content: space;
+        justify-content: space-between;
         width: 100%;
         height: 100%;
         gap:10px;

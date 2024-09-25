@@ -39,7 +39,6 @@ export const store = createStore({
             state.isNavOpen = !state.isNavOpen
         },
         scrollToSection({ state, dispatch }, sectionHtml) {
-			console.log("TCL: scrollToSection -> sectionHtml", sectionHtml)
             if( state.mobile ){
                 sectionHtml.scrollIntoView({ behavior: 'smooth' });
                 setTimeout(()=>{
