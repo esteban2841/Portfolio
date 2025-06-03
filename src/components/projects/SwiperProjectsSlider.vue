@@ -49,7 +49,7 @@
     </swiper>
 </template>
 <script>
-    import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+    import { Navigation, Pagination, A11y } from 'swiper/modules';
 
     import { Swiper, SwiperSlide } from 'swiper/vue';
 
@@ -62,14 +62,23 @@
     import onlineNaturePhoto from '../../assets/projectImages/onlineNature.png'
     import pokemonsPhoto from '../../assets/projectImages/pokemonsApp.png'
     import wardonsScreen from '../../assets/projectImages/wardons-screen.png'
+    import boutiqueBiker from '../../assets/projectImages/boutiqueBIker.png'
 
-    const projectImages = [devsNFTPhoto,onlineNaturePhoto, pokemonsPhoto, wardonsScreen]
+    const projectImages = [devsNFTPhoto,onlineNaturePhoto, pokemonsPhoto, wardonsScreen, boutiqueBiker]
 
     const projectCards = [
         {
+            name: "Boutique Bikers",
+            url: "https://boutiquebikercol.com",
+            frontend: ['React Native', 'Next', 'Blender 4', 'Three js', 'styled-components', 'vanilla js', 'tailwind', 'admin dashboard', 'mapbox js'],
+            backend: ['Next', 'Supabase', 'Mercadopago', 'Addi', 'Websockets', 'ETL data transfering', 'custom charts'],
+            backImg: projectImages[4],
+            description: 'experience_card_job8_goals_title_text'
+        },
+        {
             name: "Wardons club",
             url: "https://wardons-club.vercel.app/",
-            frontend: ['React', 'Next', 'useReducer', 'styled-components', 'vanilla js', 'tailwind', 'mapbox js'],
+            frontend: ['React', 'Next', 'useReducer', 'Three js', 'styled-components', 'vanilla js', 'tailwind', 'mapbox js'],
             backend: ['Next', 'Supabase'],
             backImg: projectImages[3],
             description: 'experience_card_job0_goals_title_text'
