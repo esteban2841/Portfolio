@@ -69,7 +69,7 @@
 
     const projectCards = [
         {
-            name: "Boutique Bikers",
+            name: "Scala design",
             url: "https://www.scaladesigncorp.com/",
             frontend: ['React Native', 'Next', 'styled-components', 'vanilla js', 'tailwind', 'admin dashboard', 'mapbox js'],
             backend: ['Next', 'Supabase'],
