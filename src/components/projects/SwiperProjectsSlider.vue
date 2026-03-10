@@ -63,18 +63,18 @@
     import pokemonsPhoto from '../../assets/projectImages/pokemonsApp.png'
     import wardonsScreen from '../../assets/projectImages/wardons-screen.png'
     import boutiqueBiker from '../../assets/projectImages/boutiqueBIker.png'
-    import scala from '../../assets/projectImages/ScalaQargo.png'
+    import Scala from '../../assets/projectImages/scala.png'
 
-    const projectImages = [devsNFTPhoto,onlineNaturePhoto, pokemonsPhoto, wardonsScreen, boutiqueBiker, scala];
+    const projectImages = [devsNFTPhoto,onlineNaturePhoto, pokemonsPhoto, wardonsScreen, boutiqueBiker, Scala]
 
     const projectCards = [
         {
-            name: "Scala Design",
-            url: "https://www.scaladesigncorp.com",
-            frontend: ['Next', 'styled-components', 'vanilla js', 'tailwind', 'mapbox js'],
-            backend: ['Next', 'ETL data transfering', 'custom charts'],
+            name: "Scala design",
+            url: "https://www.scaladesigncorp.com/",
+            frontend: ['React Native', 'Next', 'styled-components', 'vanilla js', 'tailwind', 'admin dashboard', 'mapbox js'],
+            backend: ['Next', 'Supabase'],
             backImg: projectImages[5],
-            description: 'experience_card_job9_goals_title_text'
+            description: 'experience_card_job8_goals_title_text'
         },
         {
             name: "Boutique Bikers",
